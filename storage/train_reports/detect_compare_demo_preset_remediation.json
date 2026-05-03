@@ -1,0 +1,104 @@
+{
+  "timestamp": "20260428_215349",
+  "data_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows.csv",
+  "dataset_rows": 8000,
+  "default_l1_gated": {
+    "alert_count": 0,
+    "severity_distribution": {},
+    "threat_score_mean": 0.0,
+    "threat_score_median": 0.0,
+    "l2_channel_contribution": {
+      "rf": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "ae": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "lstm": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "embedding": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "hdr": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "lstm_pkt": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      }
+    },
+    "l1_triggered_true_count": 0,
+    "l1_triggered_present": false
+  },
+  "parallel_l2": {
+    "alert_count": 0,
+    "severity_distribution": {},
+    "threat_score_mean": 0.0,
+    "threat_score_median": 0.0,
+    "l2_channel_contribution": {
+      "rf": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "ae": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "lstm": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "embedding": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "hdr": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "lstm_pkt": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      }
+    },
+    "l1_triggered_true_count": 0,
+    "l1_triggered_present": false
+  },
+  "hybrid_participation_check": {
+    "rf_non_constant_output": false,
+    "ae_non_zero_output": false,
+    "lstm_non_constant_output": false,
+    "if_participation_observed_via_l1_field": false
+  },
+  "mode_guidance": "default (L1 gated): use for stricter production-like filtering and lower noise; parallel-l2: use for analysis/reporting when you need full L2 visibility."
+}

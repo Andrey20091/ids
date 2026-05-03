@@ -1,0 +1,198 @@
+{
+  "timestamp": "2026-04-27T17:42:08Z",
+  "git_hash": null,
+  "alerts_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json",
+  "online_outcome_global": {
+    "status": "ok",
+    "reason": ""
+  },
+  "usage_parse_error": null,
+  "models": [
+    {
+      "model": "rf",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\rf_model.joblib",
+          "size_bytes": 11609,
+          "mtime": "2026-04-27T20:42:08"
+        },
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\rf_label_encoder.joblib",
+          "size_bytes": 491,
+          "mtime": "2026-04-27T20:42:08"
+        }
+      ],
+      "last_train_metrics": {
+        "accuracy": 0.99984375,
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib"
+      },
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "if_flow",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\if_model.joblib",
+          "size_bytes": 39465,
+          "mtime": "2026-04-27T20:42:08"
+        }
+      ],
+      "last_train_metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib"
+      },
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "if_agg",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\if_agg_model.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+        "aggregate_rows": 507,
+        "aggregate_freq": "1min"
+      },
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "ae",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\ae_model.pt",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\ae_model.pt",
+        "threshold": 26618068992.0
+      },
+      "used_in_last_detect": true,
+      "last_online_outcome": null
+    },
+    {
+      "model": "lstm",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\lstm_model.pt",
+          "size_bytes": 0,
+          "mtime": null
+        },
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\lstm_label_encoder.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_model.pt",
+        "val_f1": 0.33262006657156445
+      },
+      "used_in_last_detect": true,
+      "last_online_outcome": null
+    },
+    {
+      "model": "embedding",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\embedding_classifier.pt",
+          "size_bytes": 0,
+          "mtime": null
+        },
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\embedding_proto_encoder.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        },
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\embedding_port_encoder.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {
+        "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_classifier.pt",
+        "last_epoch_loss": 164.3534939829027,
+        "train_acc": 0.8823125,
+        "val_acc": 0.5121875
+      },
+      "used_in_last_detect": true,
+      "last_online_outcome": null
+    },
+    {
+      "model": "raw_header_cnn",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\raw_header_cnn.pt",
+          "size_bytes": 0,
+          "mtime": null
+        },
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\raw_header_cnn_label_encoder.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn.pt",
+        "n_classes": 3,
+        "seq_len": 960
+      },
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "info",
+        "reason": "offline_only: retrain via scripts/02_train_all.py (hb_* required)"
+      }
+    },
+    {
+      "model": "lstm_packets",
+      "ready_for_detect": false,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-106\\test_online_retrain_returns_de0\\artifacts\\lstm_packets_model.pt",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": false,
+      "last_online_outcome": null
+    }
+  ]
+}

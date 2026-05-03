@@ -1,0 +1,72 @@
+{
+  "timestamp": "20260425_131704",
+  "data_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows.csv",
+  "dataset_rows": 8000,
+  "default_l1_gated": {
+    "alert_count": 0,
+    "severity_distribution": {},
+    "threat_score_mean": 0.0,
+    "threat_score_median": 0.0,
+    "l2_channel_contribution": {
+      "rf": {
+        "mean": 0.0,
+        "non_zero_count": 0
+      },
+      "ae": {
+        "mean": 0.0,
+        "non_zero_count": 0
+      },
+      "lstm": {
+        "mean": 0.0,
+        "non_zero_count": 0
+      },
+      "embedding": {
+        "mean": 0.0,
+        "non_zero_count": 0
+      },
+      "hdr": {
+        "mean": 0.0,
+        "non_zero_count": 0
+      },
+      "lstm_pkt": {
+        "mean": 0.0,
+        "non_zero_count": 0
+      }
+    }
+  },
+  "parallel_l2": {
+    "alert_count": 9,
+    "severity_distribution": {
+      "Medium": 9
+    },
+    "threat_score_mean": 53.5467,
+    "threat_score_median": 52.56,
+    "l2_channel_contribution": {
+      "rf": {
+        "mean": 0.274889,
+        "non_zero_count": 9
+      },
+      "ae": {
+        "mean": 0.226778,
+        "non_zero_count": 9
+      },
+      "lstm": {
+        "mean": 0.2766,
+        "non_zero_count": 9
+      },
+      "embedding": {
+        "mean": 0.273033,
+        "non_zero_count": 9
+      },
+      "hdr": {
+        "mean": 0.5101,
+        "non_zero_count": 9
+      },
+      "lstm_pkt": {
+        "mean": 0.0,
+        "non_zero_count": 0
+      }
+    }
+  },
+  "mode_guidance": "default (L1 gated): use for stricter production-like filtering and lower noise; parallel-l2: use for analysis/reporting when you need full L2 visibility."
+}

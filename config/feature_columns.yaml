@@ -1,0 +1,69 @@
+# =============================================================================
+# Признаки: полный CICIDS2017 (опция) + кейс 4 + сырые байты заголовков (hb_*).
+# =============================================================================
+
+cicids2017:
+  # Включает все числовые поля из config/cicids2017_canonical_numeric.yaml + список ниже.
+  include_all_canonical_numeric: true
+  canonical_exclude: []
+
+header_raw_bytes:
+  enabled: true
+  max_packets: 24
+  bytes_per_packet: 40
+  column_prefix: "hb_"
+
+numeric_features:
+  - Flow Duration
+  - Total Fwd Packets
+  - Total Backward Packets
+  - Fwd Packet Length Max
+  - Fwd Packet Length Min
+  - Fwd Packet Length Mean
+  - Bwd Packet Length Max
+  - Flow Bytes/s
+  - Flow Packets/s
+  - SYN Flag Count
+  - FIN Flag Count
+  - RST Flag Count
+  - http_token_len
+  - http_slash_count
+  - http_non_alnum_ratio
+  - http_flows_same_ip_60s
+  - http_uri_len_roll_std
+  - http_method_hash
+  - dns_qname_len
+  - dns_qname_entropy
+  - dns_label_count
+  - dns_max_label_len
+  - dns_digit_ratio
+  # PCAP plaintext enrichment (prepare --pcap-enrichment); без TLS
+  - pcap_dns_qname_len_max
+  - pcap_dns_qname_entropy_max
+  - pcap_http_first_line_len_max
+  - pcap_plaintext_hits
+  - hdr_Flow_Duration
+  - hdr_Fwd_Packet_Length_Max
+  - hdr_Bwd_Packet_Length_Max
+  - hdr_Flow_Bytes/s
+  - hdr_Flow_Packets/s
+  - hdr_SYN_Flag_Count
+  - hdr_flow_fingerprint
+  - hdr_ip_ttl_mean
+  - hdr_tcp_window_max
+
+categorical_for_embedding:
+  protocol_column: Protocol
+  port_column: Destination Port
+
+label_column: Label
+
+timestamp_column: Timestamp
+
+context_columns:
+  - Source IP
+  - Source Port
+  # Прокси-ingest кладёт их в сырой CSV; без них prepare выкидывал строки из выхода —
+  # rule+ML URI/DNS-эвристики в detect не видели http_request_uri.
+  - http_request_uri
+  - dns_qname

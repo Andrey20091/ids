@@ -1,0 +1,137 @@
+{
+  "timestamp": "2026-04-25T10:31:12Z",
+  "dataset_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows.csv",
+  "dataset_rows": 8000,
+  "config_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\config\\settings.yaml",
+  "features_yaml_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\config\\feature_columns.yaml",
+  "config_hash": "bd37b877334a930cace457fca136e4dcf4f0dd531cedb8695ebdeefbfa24de11",
+  "git_hash": null,
+  "training_profile": "production",
+  "random_state": 42,
+  "models": {
+    "rf": {
+      "train_status": "ok",
+      "metrics": {
+        "accuracy": 0.725625,
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib"
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_label_encoder.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "if_flow": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib"
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "if_agg": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+        "aggregate_rows": 400,
+        "aggregate_freq": "1min"
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model_agg.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "ae": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\ae_model.pt",
+        "threshold": 0.8927747011184692,
+        "val_mse_mean": 0.17831861972808838
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\ae_model.pt"
+      ],
+      "health": {
+        "status": "healthy",
+        "message": "val_mse_mean=0.178319, baseline=0.178319"
+      },
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "lstm": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_model.pt",
+        "val_f1": 0.20834852351440028
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_model.pt",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_label_encoder.joblib"
+      ],
+      "health": {
+        "status": "healthy",
+        "message": "val_f1=0.208349, baseline=0.208349"
+      },
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "embedding": {
+      "train_status": "ok",
+      "metrics": {
+        "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_classifier.pt",
+        "last_epoch_loss": 0.6377764940261841,
+        "train_acc": 0.725625,
+        "val_acc": 0.714375
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_classifier.pt",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_proto_encoder.joblib",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_port_encoder.joblib"
+      ],
+      "health": {
+        "status": "healthy",
+        "message": "val_acc=0.714375, baseline=0.714375"
+      },
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "raw_header_cnn": {
+      "train_status": "skipped",
+      "metrics": {},
+      "warnings": [
+        "hb_* matrix is all zero",
+        "hb_* signal quality is insufficient for meaningful CNN contribution"
+      ],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn.pt",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn_label_encoder.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": false
+    }
+  },
+  "hb_signal_quality": {
+    "hb_columns_total": 960,
+    "hb_columns_present": 960,
+    "nonzero_fraction": 0.0,
+    "variance_mean": 0.0,
+    "signal_quality": "constant_or_empty",
+    "warning": "hb_* signal is constant/empty; raw_header_cnn may become near-constant in detect."
+  },
+  "warnings": [
+    "hb_* signal is constant/empty; raw_header_cnn may become near-constant in detect."
+  ],
+  "baseline_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\model_baselines.json"
+}

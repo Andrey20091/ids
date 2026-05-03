@@ -1,0 +1,110 @@
+{
+  "timestamp": "20260428_224317",
+  "data_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows.csv",
+  "dataset_rows": 32000,
+  "default_l1_gated": {
+    "alert_count": 4,
+    "severity_distribution": {
+      "Medium": 4
+    },
+    "threat_score_mean": 61.45,
+    "threat_score_median": 60.96,
+    "l2_channel_contribution": {
+      "rf": {
+        "mean": 1.0,
+        "non_zero_count": 4,
+        "std": 0.0,
+        "is_non_constant": false
+      },
+      "ae": {
+        "mean": 41462618814.86828,
+        "non_zero_count": 4,
+        "std": 82163142277.66837,
+        "is_non_constant": true
+      },
+      "lstm": {
+        "mean": 0.112,
+        "non_zero_count": 1,
+        "std": 0.224,
+        "is_non_constant": true
+      },
+      "embedding": {
+        "mean": 0.5,
+        "non_zero_count": 2,
+        "std": 0.57735027,
+        "is_non_constant": true
+      },
+      "hdr": {
+        "mean": 0.345075,
+        "non_zero_count": 3,
+        "std": 0.23005,
+        "is_non_constant": true
+      },
+      "lstm_pkt": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      }
+    },
+    "l1_triggered_true_count": 4,
+    "l1_triggered_present": true
+  },
+  "parallel_l2": {
+    "alert_count": 27571,
+    "severity_distribution": {
+      "Medium": 14192,
+      "High": 11172,
+      "Low": 2207
+    },
+    "threat_score_mean": 62.6059,
+    "threat_score_median": 64.41,
+    "l2_channel_contribution": {
+      "rf": {
+        "mean": 0.928365,
+        "non_zero_count": 27571,
+        "std": 0.242851,
+        "is_non_constant": true
+      },
+      "ae": {
+        "mean": 28483914633.707363,
+        "non_zero_count": 27571,
+        "std": 91354683229.72887,
+        "is_non_constant": true
+      },
+      "lstm": {
+        "mean": 0.48873,
+        "non_zero_count": 27559,
+        "std": 0.08401895,
+        "is_non_constant": true
+      },
+      "embedding": {
+        "mean": 0.326316,
+        "non_zero_count": 9186,
+        "std": 0.46815463,
+        "is_non_constant": true
+      },
+      "hdr": {
+        "mean": 0.322259,
+        "non_zero_count": 19315,
+        "std": 0.21076571,
+        "is_non_constant": true
+      },
+      "lstm_pkt": {
+        "mean": 0.0,
+        "non_zero_count": 0,
+        "std": 0.0,
+        "is_non_constant": false
+      }
+    },
+    "l1_triggered_true_count": 4,
+    "l1_triggered_present": true
+  },
+  "hybrid_participation_check": {
+    "rf_non_constant_output": true,
+    "ae_non_zero_output": true,
+    "lstm_non_constant_output": true,
+    "if_participation_observed_via_l1_field": true
+  },
+  "mode_guidance": "default (L1 gated): use for stricter production-like filtering and lower noise; parallel-l2: use for analysis/reporting when you need full L2 visibility."
+}

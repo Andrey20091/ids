@@ -1,0 +1,101 @@
+{
+  "overall_status": "PASS",
+  "steps": [
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py generate",
+      "rc": 0,
+      "seconds": 2.318,
+      "stdout_tail": "Wrote 8000 rows to C:\\Users\\user\\Desktop\\ids-ml-project\\data\\raw\\synthetic_cicids_demo.csv (seed=42)",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py prepare --input data/raw/synthetic_cicids_demo.csv",
+      "rc": 0,
+      "seconds": 7.001,
+      "stdout_tail": "Предупреждение (инварианты данных): Все hb_* равны нулю — CNN заголовков будет пропущен при train; проверьте NPZ и scripts/16_build_header_byte_dataset.py + тот же день PCAP/CSV.\nWrote C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows.csv with shape (8000, 1034)",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py train --skip-torch",
+      "rc": 0,
+      "seconds": 6.126,
+      "stdout_tail": "IsolationForest (aggregates): C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib\nRandomForest: {'accuracy': 0.725625, 'model_path': 'C:\\\\Users\\\\user\\\\Desktop\\\\ids-ml-project\\\\artifacts\\\\rf_model.joblib'}\nArtifacts in C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py train",
+      "rc": 0,
+      "seconds": 39.382,
+      "stdout_tail": "Autoencoder: {'model_path': 'C:\\\\Users\\\\user\\\\Desktop\\\\ids-ml-project\\\\artifacts\\\\ae_model.pt', 'threshold': 0.3187004625797272}\nLSTM: {'model_path': 'C:\\\\Users\\\\user\\\\Desktop\\\\ids-ml-project\\\\artifacts\\\\lstm_model.pt'}\nEmbedding classifier: {'path': 'C:\\\\Users\\\\user\\\\Desktop\\\\ids-ml-project\\\\artifacts\\\\embedding_classifier.pt', 'last_epoch_loss': 0.6356012020260096, 'train_acc': 0.632125}\nSkipping raw header CNN: hb_* columns are all zero (build NPZ via 16_build_header_byte_dataset.py)\nArtifacts in C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py detect --detect-limit 2000",
+      "rc": 0,
+      "seconds": 6.283,
+      "stdout_tail": "Detect config: alert_threshold=45.00\nWrote 0 alerts (capped 200 in file) to C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json\nПодсказка: 0 алертов — снизьте пороги в коде _should_alert, увеличьте --limit, или в config/settings.yaml выставьте pipeline.l2_only_after_l1: false и aggregation.syn_spike_multiplier поменьше (если используете строгий L1->L2).\nСтарт detect: alert_threshold=45.00",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py detect --detect-limit 2000 --detect-parallel-l2",
+      "rc": 0,
+      "seconds": 25.373,
+      "stdout_tail": "Detect config: alert_threshold=45.00\nWrote 3 alerts (capped 200 in file) to C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json\nСтарт detect: alert_threshold=45.00",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py detect --detect-limit 2000 --detect-stream-chunk-rows 500 --detect-log-wall-time",
+      "rc": 0,
+      "seconds": 6.809,
+      "stdout_tail": "[stream] chunk=3 rows=500 elapsed_s=3.4486\n[stream] total elapsed_s=3.4491 alerts_raw=0\nWrote 0 alerts (capped 200 in file) to C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json\nПодсказка: 0 алертов — снизьте пороги в коде _should_alert, увеличьте --limit, или в config/settings.yaml выставьте pipeline.l2_only_after_l1: false и aggregation.syn_spike_multiplier поменьше (если используете строгий L1->L2).\nСтарт detect: alert_threshold=45.00",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py online",
+      "rc": 0,
+      "seconds": 5.248,
+      "stdout_tail": "{'status': 'rejected', 'metrics': {'f1': 0.0635593220338983, 'precision': 1.0, 'recall': 0.03282275711159737}, 'baseline_f1': 0.17928286852589642, 'reason': 'validation F1 not improved vs baseline'}",
+      "stderr_tail": ""
+    }
+  ],
+  "artifact_checks": {
+    "rf_model": true,
+    "if_model": true,
+    "if_agg_model": true,
+    "ae_model": true,
+    "lstm_model": true,
+    "embedding_classifier": true
+  },
+  "alerts_latest": {
+    "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json",
+    "valid_json_array": true,
+    "count": 0
+  },
+  "retrain_history_last": {
+    "run_id": "rt_20260420_161936",
+    "ts": "2026-04-20T16:19:37Z",
+    "result": "rejected",
+    "reason": "validation F1 not improved vs baseline",
+    "input_rows": 8000,
+    "if_metrics": {
+      "f1": 0.0635593220338983,
+      "precision": 1.0,
+      "recall": 0.03282275711159737
+    },
+    "if_baseline_f1": 0.17928286852589642,
+    "rf_f1": null,
+    "rf_baseline_f1": null,
+    "deep_models": {},
+    "if_aggregate": {},
+    "retrain_interval_minutes": 15,
+    "min_samples_retrain_threshold": 5000,
+    "deep_validation_enabled": true,
+    "iteration_semantics": "Одна строка JSONL = один вызов run_one_retrain_iteration (тик планировщика или ручной запуск). Интервал online.retrain_interval_minutes задаёт частоту попыток, а не гарантию обновления весов. result=ok — IF прошёл валидацию и записан; RF/глубокие модели — см. поля выше. result=skipped — дообучение не запускалось (например input_rows < min_samples_retrain_threshold). result=rejected — откат IF; в deep_models возможны отдельные rejected после val gate."
+  },
+  "dashboard_smoke": {
+    "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe -m streamlit run dashboard/app.py --server.headless true --server.port 8798",
+    "started": true,
+    "port": 8798,
+    "log_tail": "\n  You can now view your Streamlit app in your browser.\n\n  Local URL: http://localhost:8798"
+  }
+}

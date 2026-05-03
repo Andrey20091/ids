@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-05-02T09:47:38Z",
+  "dataset_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows_baseline.csv",
+  "dataset_rows": 53036,
+  "config_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\config\\settings.yaml",
+  "features_yaml_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\config\\feature_columns.yaml",
+  "config_hash": "7fdd3d61dda443cb13bfc23d18e9692285e1b3c838a512375c93635c682bc7c0",
+  "git_hash": null,
+  "training_profile": "development",
+  "dataset_tag": "cicids2017",
+  "dataset_source": "CICIDS2017",
+  "train_mode": "baseline",
+  "policy_decision": "allowed",
+  "training_policy": {
+    "enforce_cicids_baseline": true,
+    "require_baseline_before_online": true,
+    "prohibit_full_retrain_on_new_data": true,
+    "cicids_tag_values": [
+      "cicids2017",
+      "cicids",
+      "baseline_cicids2017"
+    ],
+    "baseline_manifest_path": "storage/baseline_manifest.json",
+    "allow_force_rebaseline": true,
+    "disallow_skip_torch_for_baseline": false
+  },
+  "random_state": 42,
+  "models": {
+    "rf": {
+      "train_status": "ok",
+      "metrics": {
+        "accuracy": 0.9990573152337858,
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib"
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_label_encoder.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "if_flow": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib"
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "if_agg": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+        "aggregate_rows": 175389,
+        "aggregate_freq": "1min"
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model_agg.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "ae": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\ae_model.pt",
+        "threshold": 335616081920.0
+      },
+      "warnings": [
+        "val_mse_mean is missing; AE health gate is informational for this run"
+      ],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\ae_model.pt"
+      ],
+      "health": {
+        "status": "warning",
+        "message": "metric val_mse_mean is missing"
+      },
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "lstm": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_model.pt",
+        "val_f1": 0.12467119684348969
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_model.pt",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_label_encoder.joblib"
+      ],
+      "health": {
+        "status": "degraded",
+        "message": "val_f1=0.124671, baseline=0.208349"
+      },
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "embedding": {
+      "train_status": "ok",
+      "metrics": {
+        "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_classifier.pt",
+        "last_epoch_loss": 46.438485240865134,
+        "train_acc": 0.9492231691681122,
+        "val_acc": 0.7921380090497737,
+        "oov_port_fraction": 0.07202654800512859,
+        "oov_proto_fraction": 0.07202654800512859
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_classifier.pt",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_proto_encoder.joblib",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_port_encoder.joblib"
+      ],
+      "health": {
+        "status": "healthy",
+        "message": "val_acc=0.792138, baseline=0.714375"
+      },
+      "stability": {
+        "oov_port_fraction": 0.07202654800512859,
+        "oov_proto_fraction": 0.07202654800512859,
+        "high_oov_risk": false
+      },
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "raw_header_cnn": {
+      "train_status": "skipped",
+      "metrics": {},
+      "warnings": [
+        "hb_* matrix is all zero",
+        "hb_* signal quality is insufficient for meaningful CNN contribution"
+      ],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn.pt",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn_label_encoder.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": false
+    }
+  },
+  "hb_signal_quality": {
+    "hb_columns_total": 960,
+    "hb_columns_present": 960,
+    "nonzero_fraction": 0.0,
+    "variance_mean": 0.0,
+    "signal_quality": "constant_or_empty",
+    "warning": "hb_* signal is constant/empty; raw_header_cnn may become near-constant in detect."
+  },
+  "warnings": [
+    "hb_* signal is constant/empty; raw_header_cnn may become near-constant in detect."
+  ],
+  "baseline_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\model_baselines.json"
+}

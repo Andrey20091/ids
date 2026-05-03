@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-05-02T09:50:35Z",
+  "dataset_tag": "cicids2017",
+  "dataset_source": "CICIDS2017",
+  "dataset_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows_baseline.csv",
+  "train_report_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\train_reports\\train_report_20260502_125035.json",
+  "training_profile": "development",
+  "config_hash": "7fdd3d61dda443cb13bfc23d18e9692285e1b3c838a512375c93635c682bc7c0",
+  "git_hash": null,
+  "artifacts": [
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib",
+      "size_bytes": 2297193,
+      "mtime": 1777715263.0840669,
+      "sha256": "cb2b249a7f90e27d4f8cb6c7939a659d9dbad8138e63968e69c7dc4c6454f37f"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_label_encoder.joblib",
+      "size_bytes": 491,
+      "mtime": 1777715263.0860708,
+      "sha256": "37a95320663fce775827a69b5db444bf586d9f92f73b9947740169fb14ed2d6a"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib",
+      "size_bytes": 1270537,
+      "mtime": 1777715260.5060835,
+      "sha256": "836b31136d270c14d4147b72d63a9fcb0d6f148bed7ee5067330c3725b9344cd"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+      "size_bytes": 54201,
+      "mtime": 1777715261.9962327,
+      "sha256": "ea589573d7550cd8a8b67e8eb26689518f23925b681a683894389573f7e31871"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model_agg.joblib",
+      "size_bytes": 54201,
+      "mtime": 1777715261.9962327,
+      "sha256": "ea589573d7550cd8a8b67e8eb26689518f23925b681a683894389573f7e31871"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\ae_model.pt",
+      "size_bytes": 550235,
+      "mtime": 1777715274.1652257,
+      "sha256": "d0216cf43c6cb2593b01561490dae9b08339d7ad4a2a27219dd1f33586dbb988"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_model.pt",
+      "size_bytes": 1123577,
+      "mtime": 1777715313.382337,
+      "sha256": "c20dd91448cdd1a9b3bd50496e25b2890bf77ea5c91aa58cf3d6da83de0afc76"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_label_encoder.joblib",
+      "size_bytes": 605,
+      "mtime": 1777715313.382337,
+      "sha256": "5645df8d524359c66179f8ef1ca757ab0e579043a72820cc22c87f4d69780aac"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_classifier.pt",
+      "size_bytes": 569073,
+      "mtime": 1777715434.4292212,
+      "sha256": "dd315fe0fde1fb8f705447cef84a6d0a97f4198a1eb82586ddd5b9fe5f984800"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_proto_encoder.joblib",
+      "size_bytes": 492,
+      "mtime": 1777715434.4292212,
+      "sha256": "cb0dc1617f8e3a7f0a0e249676b7da7dc7de94a13996a0348504a475c6ee1cee"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_port_encoder.joblib",
+      "size_bytes": 42619,
+      "mtime": 1777715434.4314117,
+      "sha256": "b019d79dd95f686cb8b67d847a77cfc5c3d7e83a0f2acb60ab30b2f45f9fdbc9"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn.pt",
+      "size_bytes": 93993,
+      "mtime": 1777449634.4455693,
+      "sha256": "dca91ba196a037ebfa81c4bc8f419e5edc71c2124023230586fdda600a4dbfaf"
+    },
+    {
+      "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn_label_encoder.joblib",
+      "size_bytes": 500,
+      "mtime": 1777449634.4455693,
+      "sha256": "6a909d9e7e71823a14dd2cf482ae26350f4e8fddc15e9278be22e6a33becc294"
+    }
+  ]
+}

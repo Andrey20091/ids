@@ -1,0 +1,4 @@
+{"timestamp": "2024-01-15T10:00:00", "client_ip": "10.0.0.5", "evt": "failed_login", "severity": "medium"}
+{"timestamp": "2024-01-15T10:02:00", "ip": "10.0.0.5", "event_type": "failed_login", "severity": "medium"}
+{"timestamp": "2024-01-15T10:30:00", "client_ip": "10.0.0.12", "event_type": "config_change", "severity": "high"}
+{"timestamp": "2024-01-15T11:00:00", "ip": "10.0.0.20", "evt": "new_user", "severity": "low"}

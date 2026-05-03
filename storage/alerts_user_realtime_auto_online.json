@@ -1,0 +1,19 @@
+[
+  {
+    "ip": "192.168.1.38",
+    "threat_score": 49.67,
+    "severity": "Low",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Low: monitor and log; weak threat signals, no immediate containment required.",
+    "status": "new",
+    "ts": "2025-01-21 08:37:28",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 0.0325,
+    "l2_lstm_attack_score": 0.4709,
+    "l2_emb_attack_score": 0.391,
+    "l2_hdr_cnn_attack_score": 0.4601,
+    "l2_lstm_pkt_score": 0.0
+  }
+]

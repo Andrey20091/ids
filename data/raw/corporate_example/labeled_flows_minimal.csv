@@ -1,0 +1,4 @@
+Flow ID,Source IP,Destination IP,Protocol,Timestamp,Label,Flow Duration,Destination Port,Flow Bytes/s,Flow Packets/s
+1,192.168.1.10,10.0.0.5,6,21/01/2025 08:15:23,BENIGN,1.2,443,12500.0,12.0
+2,192.168.1.11,203.0.113.7,6,21/01/2025 08:15:45,Bot,3.5,8080,89000.0,40.0
+3,10.0.0.3,192.168.50.1,17,21/01/2025 08:16:01,BENIGN,0.8,53,3200.0,5.0

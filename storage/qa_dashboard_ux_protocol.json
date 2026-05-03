@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "checks_total": 9,
+    "checks_passed": 9,
+    "checks_failed": 0
+  },
+  "checks": [
+    {
+      "check": "alerts_load",
+      "status": "PASS",
+      "details": {
+        "rows": 4,
+        "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json"
+      }
+    },
+    {
+      "check": "filter_status",
+      "status": "PASS",
+      "details": {
+        "rows_after": 4
+      }
+    },
+    {
+      "check": "filter_severity",
+      "status": "PASS",
+      "details": {
+        "rows_after": 2
+      }
+    },
+    {
+      "check": "filter_ip_contains",
+      "status": "PASS",
+      "details": {
+        "query": "10",
+        "rows_after": 4
+      }
+    },
+    {
+      "check": "filter_min_score",
+      "status": "PASS",
+      "details": {
+        "rows_after": 3
+      }
+    },
+    {
+      "check": "timeseries_precondition",
+      "status": "PASS",
+      "details": {
+        "has_ts_column": true
+      }
+    },
+    {
+      "check": "map_precondition",
+      "status": "PASS",
+      "details": {
+        "has_geo": false
+      }
+    },
+    {
+      "check": "recommendations_precondition",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "check": "incident_card",
+      "status": "PASS",
+      "details": {
+        "incident_id": "inc_30c0c4e49d7d"
+      }
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-04-25T10:14:30Z",
+  "git_hash": null,
+  "alerts_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json",
+  "models": [
+    {
+      "model": "rf",
+      "ready_for_detect": false,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\rf_model.joblib",
+          "size_bytes": 11609,
+          "mtime": "2026-04-25T13:14:30"
+        },
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\rf_label_encoder.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "if_flow",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\if_model.joblib",
+          "size_bytes": 39465,
+          "mtime": "2026-04-25T13:14:30"
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "if_agg",
+      "ready_for_detect": false,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\if_agg_model.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "ae",
+      "ready_for_detect": false,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\ae_model.pt",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "lstm",
+      "ready_for_detect": false,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\lstm_model.pt",
+          "size_bytes": 0,
+          "mtime": null
+        },
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\lstm_label_encoder.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "embedding",
+      "ready_for_detect": false,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\embedding_classifier.pt",
+          "size_bytes": 0,
+          "mtime": null
+        },
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\embedding_proto_encoder.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        },
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\embedding_port_encoder.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "raw_header_cnn",
+      "ready_for_detect": false,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\raw_header_cnn.pt",
+          "size_bytes": 0,
+          "mtime": null
+        },
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\raw_header_cnn_label_encoder.joblib",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    },
+    {
+      "model": "lstm_packets",
+      "ready_for_detect": false,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\AppData\\Local\\Temp\\pytest-of-user\\pytest-95\\test_governance_retrain_histor0\\artifacts\\lstm_packets_model.pt",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": true,
+      "last_online_outcome": {
+        "status": "ok",
+        "reason": ""
+      }
+    }
+  ]
+}

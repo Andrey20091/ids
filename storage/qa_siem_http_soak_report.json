@@ -1,0 +1,16 @@
+{
+  "iterations": 120,
+  "siem_http_timeout_seconds": 1,
+  "ok_loads": 94,
+  "empty_or_fallback_loads": 26,
+  "loader_exceptions": 0,
+  "detect_runs": 12,
+  "detect_exceptions": 0,
+  "server_mode_counts": {
+    "ok": 103,
+    "slow": 15,
+    "http_500": 14,
+    "bad_payload": 14
+  },
+  "elapsed_seconds": 43.528
+}

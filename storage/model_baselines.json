@@ -1,0 +1,23 @@
+{
+  "autoencoder": {
+    "metric": "val_mse_mean",
+    "direction": "lower_is_better",
+    "reference": 0.17831861972808838,
+    "tolerance_ratio_up": 1.12,
+    "reference_updated_at": "2026-04-25T10:15:30Z"
+  },
+  "lstm": {
+    "metric": "val_f1",
+    "direction": "higher_is_better",
+    "reference": 0.20834852351440028,
+    "tolerance_delta_down": 0.02,
+    "reference_updated_at": "2026-04-25T10:15:49Z"
+  },
+  "embedding": {
+    "metric": "val_acc",
+    "direction": "higher_is_better",
+    "reference": 0.714375,
+    "tolerance_delta_down": 0.02,
+    "reference_updated_at": "2026-04-25T10:15:52Z"
+  }
+}

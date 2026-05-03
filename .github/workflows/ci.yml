@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install pytest
+
+      - name: Run tests
+        run: pytest tests -q --tb=short
+
+      - name: Ruff lint (if configured)
+        run: |
+          if [ -f pyproject.toml ] && grep -q "\[tool\.ruff\]" pyproject.toml; then
+            pip install ruff
+            ruff check src tests dashboard
+          else
+            echo "Ruff is not configured in pyproject.toml, skipping lint."
+          fi

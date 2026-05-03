@@ -1,0 +1,155 @@
+# IDS ML project — main settings (aligns with university case ТЗ)
+
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  flows_current: data/processed/flows.csv
+  flows_online_buffer: data/processed/flows_online_buffer.csv
+  flows_baseline: data/processed/flows_baseline.csv
+  corporate_pcap: data/corporate_pcap
+  artifacts: artifacts
+  storage: storage
+  siem_events: storage/siem_events_sample.json
+  # NDJSON для siem.source: ndjson_file (если ndjson_path в siem не задан)
+  siem_events_ndjson: storage/siem_events_sample.ndjson
+  alerts_db: storage/alerts.db
+
+training_policy:
+  enforce_cicids_baseline: true
+  require_baseline_before_online: true
+  prohibit_full_retrain_on_new_data: true
+  cicids_tag_values:
+    - cicids2017
+    - cicids
+    - baseline_cicids2017
+  baseline_manifest_path: storage/baseline_manifest.json
+  allow_force_rebaseline: true
+  disallow_skip_torch_for_baseline: false
+
+dataset:
+  tag: ""
+  source: ""
+  is_baseline_candidate: false
+
+aggregation:
+  time_window_seconds: 60
+  syn_spike_multiplier: 3.0
+  resample_freq: "1min"
+
+pipeline:
+  # false = демо сразу даёт алерты по RF/AE/LSTM; true = строгий каскад ТЗ (L2 только после L1)
+  l2_only_after_l1: true
+  # If true and timestamp missing, L1 is skipped (all rows pass to L2)
+  require_timestamp_for_l1: false
+
+online:
+  retrain_interval_minutes: 15
+  min_samples_retrain: 5000
+  validation_size_ratio: 0.2
+  # Accept new IF only if val F1 >= baseline (or no baseline yet)
+  if_accept_equal_f1: true
+  retrain_deep_models: true
+  deep_models_epochs:
+    autoencoder: 5
+    lstm: 3
+    embedding: 3
+  # Валидационный шлюз для AE / LSTM / embedding (ТЗ: как для IF/RF)
+  # Важно: raw_header_cnn в online-контур не входит; обновление через offline train (scripts/02_train_all.py).
+  # Отдельный val-gate для IF на минутных агрегатах (proxy-F1 vs max(is_attack) по бакету)
+  agg_if_validation:
+    enabled: true
+    min_f1_vs_baseline: -0.05
+  deep_validation:
+    enabled: true
+    # AE: откат, если средний MSE на нормальном val выше baseline * ratio (хуже реконструкция)
+    ae_max_val_mse_ratio: 1.12
+    # LSTM / embedding: откат, если val-метрика ниже baseline + delta (delta отрицательный = допуск просадки)
+    lstm_min_val_f1_vs_baseline: -0.02
+    embedding_min_val_acc_vs_baseline: -0.02
+  watermark:
+    enabled: true
+    state_path: storage/online_buffer_watermark.json
+
+buffering:
+  flows_online_rotation_max_mb: 256
+  flows_online_rotation_backups: 3
+
+sandbox:
+  min_delta_f1: 0.01
+  min_precision: 0.65
+
+realtime:
+  poll_interval_seconds: 15
+  batch_size: 512
+
+siem:
+  # json_file — paths.siem_events (массив JSON)
+  # ndjson_file — один объект на строку; путь: siem.ndjson_path или paths.siem_events_ndjson
+  # http — GET, ответ JSON-массив
+  source: json_file
+  http_url: ""
+  timeout_seconds: 5
+  retries: 0
+  retry_backoff_seconds: 0.2
+  # Пример: ndjson_file + путь к экспорту логов (timestamp, ip|client_ip, event_type|evt)
+  ndjson_path: ""
+
+# Быстрый цикл разработки: python scripts/02_train_all.py --training-profile development
+training_profiles:
+  development:
+    random_forest:
+      n_estimators: 80
+      max_depth: 18
+    isolation_forest:
+      n_estimators: 80
+    autoencoder:
+      epochs: 8
+      batch_size: 256
+    lstm:
+      epochs: 6
+      batch_size: 128
+    raw_header_cnn:
+      epochs: 6
+      batch_size: 192
+
+models:
+  random_forest:
+    n_estimators: 200
+    max_depth: 24
+    random_state: 42
+  isolation_forest:
+    n_estimators: 200
+    contamination: 0.02
+    random_state: 42
+  autoencoder:
+    encoding_dim: 32
+    epochs: 30
+    batch_size: 256
+    learning_rate: 0.001
+  lstm:
+    hidden_size: 64
+    sequence_length: 20
+    epochs: 20
+    batch_size: 128
+    learning_rate: 0.001
+  embedding:
+    epochs: 15
+    hidden_size: 64
+    embed_dim: 16
+    batch_size: 256
+    learning_rate: 0.001
+    random_state: 42
+  raw_header_cnn:
+    epochs: 25
+    batch_size: 128
+    learning_rate: 0.001
+
+threat_scoring:
+  siem_boost_failed_auth: 15
+  siem_boost_config_change: 10
+  # На реальном CICIDS2017 при 0 алертов: снизьте порог (например 30–38) или pipeline.l2_only_after_l1: false для отчёта.
+  alert_threshold: 45
+
+# Геокарта: путь к .mmdb (DB-IP Lite после bootstrap или GeoLite2). Пусто + нет GEOIP2_CITY_DB = без координат.
+geoip:
+  city_db: "data/third_party/dbip-city-lite.mmdb"

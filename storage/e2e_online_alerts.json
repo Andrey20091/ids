@@ -1,0 +1,3336 @@
+[
+  {
+    "ip": "192.168.2.96",
+    "threat_score": 62.79,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:06:38",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.9728,
+    "l2_lstm_attack_score": 0.0,
+    "l2_emb_attack_score": 0.9215,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.627922,
+      "network_score_with_rules": 0.627922
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.131",
+    "threat_score": 60.49,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:06:41",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 42.7059,
+    "l2_lstm_attack_score": 0.0,
+    "l2_emb_attack_score": 0.9993,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.56992,
+      "network_score_with_rules": 0.60492
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.228",
+    "threat_score": 63.83,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:06:52",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5768,
+    "l2_lstm_attack_score": 0.0,
+    "l2_emb_attack_score": 0.9982,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.63834,
+      "network_score_with_rules": 0.63834
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.6",
+    "threat_score": 69.53,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:06:54",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 42.2227,
+    "l2_lstm_attack_score": 0.137,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.660298,
+      "network_score_with_rules": 0.695298
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.27",
+    "threat_score": 67.85,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:07:04",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.6374,
+    "l2_lstm_attack_score": 0.4315,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.678514,
+      "network_score_with_rules": 0.678514
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.167",
+    "threat_score": 67.52,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:07:11",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.7431,
+    "l2_lstm_attack_score": 0.501,
+    "l2_emb_attack_score": 0.872,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.675171,
+      "network_score_with_rules": 0.675171
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.48",
+    "threat_score": 63.28,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:07:13",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 41.843,
+    "l2_lstm_attack_score": 0.2783,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.597826,
+      "network_score_with_rules": 0.632826
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.215",
+    "threat_score": 67.65,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:07:20",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.1572,
+    "l2_lstm_attack_score": 0.4774,
+    "l2_emb_attack_score": 0.9269,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.676521,
+      "network_score_with_rules": 0.676521
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.230",
+    "threat_score": 67.51,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:07:32",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.6508,
+    "l2_lstm_attack_score": 0.3968,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.675093,
+      "network_score_with_rules": 0.675093
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.13",
+    "threat_score": 62.72,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:07:38",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 43.6243,
+    "l2_lstm_attack_score": 0.2223,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.592226,
+      "network_score_with_rules": 0.627226
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.0.238",
+    "threat_score": 68.43,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:07:39",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.8116,
+    "l2_lstm_attack_score": 0.4665,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.684344,
+      "network_score_with_rules": 0.684344
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.23",
+    "threat_score": 62.65,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:08:22",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 43.8012,
+    "l2_lstm_attack_score": 0.2152,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.591518,
+      "network_score_with_rules": 0.626518
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.105",
+    "threat_score": 57.13,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:08:31",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.606,
+    "l2_lstm_attack_score": 0.4406,
+    "l2_emb_attack_score": 0.0025,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.571282,
+      "network_score_with_rules": 0.571282
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.196",
+    "threat_score": 71.2,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:08:39",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.5676,
+    "l2_lstm_attack_score": 0.4189,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.67699,
+      "network_score_with_rules": 0.71199
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.230",
+    "threat_score": 70.85,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:08:44",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5516,
+    "l2_lstm_attack_score": 0.3519,
+    "l2_emb_attack_score": 0.9988,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.673502,
+      "network_score_with_rules": 0.708502
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.52",
+    "threat_score": 67.3,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:09:18",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.6618,
+    "l2_lstm_attack_score": 0.5428,
+    "l2_emb_attack_score": 0.8474,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.672952,
+      "network_score_with_rules": 0.672952
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.166",
+    "threat_score": 71.23,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:09:22",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 45.1634,
+    "l2_lstm_attack_score": 0.2902,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.677321,
+      "network_score_with_rules": 0.712321
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.239",
+    "threat_score": 64.27,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:09:32",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5106,
+    "l2_lstm_attack_score": 0.5144,
+    "l2_emb_attack_score": 0.5725,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.642689,
+      "network_score_with_rules": 0.642689
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.114",
+    "threat_score": 66.99,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:09:39",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.2738,
+    "l2_lstm_attack_score": 0.3597,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.669885,
+      "network_score_with_rules": 0.669885
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.228",
+    "threat_score": 61.92,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:09:49",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 9.0437,
+    "l2_lstm_attack_score": 0.3106,
+    "l2_emb_attack_score": 0.542,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.619167,
+      "network_score_with_rules": 0.619167
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.135",
+    "threat_score": 71.54,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:09:53",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.5562,
+    "l2_lstm_attack_score": 0.4363,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.68038,
+      "network_score_with_rules": 0.71538
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.80",
+    "threat_score": 72.72,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:09:57",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.4202,
+    "l2_lstm_attack_score": 0.5433,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.692244,
+      "network_score_with_rules": 0.727244
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.18",
+    "threat_score": 71.31,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:10:01",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 44.0994,
+    "l2_lstm_attack_score": 0.2979,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.678092,
+      "network_score_with_rules": 0.713092
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.6",
+    "threat_score": 71.46,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:10:15",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.0913,
+    "l2_lstm_attack_score": 0.4321,
+    "l2_emb_attack_score": 0.9988,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.679591,
+      "network_score_with_rules": 0.714591
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.101",
+    "threat_score": 68.59,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:10:22",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.481,
+    "l2_lstm_attack_score": 0.4944,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.685898,
+      "network_score_with_rules": 0.685898
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.196",
+    "threat_score": 70.74,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:10:32",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 43.8554,
+    "l2_lstm_attack_score": 0.241,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.672403,
+      "network_score_with_rules": 0.707403
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.111",
+    "threat_score": 68.9,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:10:34",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.4652,
+    "l2_lstm_attack_score": 0.5086,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.688964,
+      "network_score_with_rules": 0.688964
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.43",
+    "threat_score": 68.0,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:10:38",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.312,
+    "l2_lstm_attack_score": 0.4252,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.679998,
+      "network_score_with_rules": 0.679998
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.130",
+    "threat_score": 66.51,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:11:00",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.3805,
+    "l2_lstm_attack_score": 0.3075,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.665109,
+      "network_score_with_rules": 0.665109
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.187",
+    "threat_score": 56.73,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:11:08",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.3263,
+    "l2_lstm_attack_score": 0.3648,
+    "l2_emb_attack_score": 0.0295,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.567261,
+      "network_score_with_rules": 0.567261
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.227",
+    "threat_score": 68.51,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:11:12",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.4682,
+    "l2_lstm_attack_score": 0.4701,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.685125,
+      "network_score_with_rules": 0.685125
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.26",
+    "threat_score": 68.33,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:11:27",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5074,
+    "l2_lstm_attack_score": 0.4656,
+    "l2_emb_attack_score": 0.9865,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.683342,
+      "network_score_with_rules": 0.683342
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.104",
+    "threat_score": 65.4,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:11:34",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.6829,
+    "l2_lstm_attack_score": 0.4025,
+    "l2_emb_attack_score": 0.7865,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.654003,
+      "network_score_with_rules": 0.654003
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.180",
+    "threat_score": 70.62,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:11:40",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 42.8944,
+    "l2_lstm_attack_score": 0.2287,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.671165,
+      "network_score_with_rules": 0.706165
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.199",
+    "threat_score": 63.51,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:11:51",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 45.8169,
+    "l2_lstm_attack_score": 0.3009,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.600089,
+      "network_score_with_rules": 0.635089
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.130",
+    "threat_score": 68.05,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:12:01",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5024,
+    "l2_lstm_attack_score": 0.4221,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.680452,
+      "network_score_with_rules": 0.680452
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.158",
+    "threat_score": 71.38,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:12:03",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.985,
+    "l2_ae_ratio": 8.5268,
+    "l2_lstm_attack_score": 0.4551,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.678753,
+      "network_score_with_rules": 0.713753
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.50",
+    "threat_score": 68.58,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:12:22",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 7.8074,
+    "l2_lstm_attack_score": 0.4526,
+    "l2_emb_attack_score": 0.7463,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.650835,
+      "network_score_with_rules": 0.685835
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.210",
+    "threat_score": 67.03,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:12:31",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.7807,
+    "l2_lstm_attack_score": 0.4004,
+    "l2_emb_attack_score": 0.9484,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.670254,
+      "network_score_with_rules": 0.670254
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.194",
+    "threat_score": 70.01,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:12:49",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.7525,
+    "l2_lstm_attack_score": 0.276,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.665083,
+      "network_score_with_rules": 0.700083
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.150",
+    "threat_score": 71.39,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:12:51",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5675,
+    "l2_lstm_attack_score": 0.4146,
+    "l2_emb_attack_score": 0.9905,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.67891,
+      "network_score_with_rules": 0.71391
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.89",
+    "threat_score": 56.95,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:13:25",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.7247,
+    "l2_lstm_attack_score": 0.4208,
+    "l2_emb_attack_score": 0.0004,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.569508,
+      "network_score_with_rules": 0.569508
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.146",
+    "threat_score": 71.29,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:13:29",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.6439,
+    "l2_lstm_attack_score": 0.391,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.677881,
+      "network_score_with_rules": 0.712881
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.197",
+    "threat_score": 64.8,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:13:31",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.98,
+    "l2_ae_ratio": 8.3321,
+    "l2_lstm_attack_score": 0.4408,
+    "l2_emb_attack_score": 0.7557,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.647967,
+      "network_score_with_rules": 0.647967
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.176",
+    "threat_score": 68.92,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:13:54",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.5529,
+    "l2_lstm_attack_score": 0.525,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.689247,
+      "network_score_with_rules": 0.689247
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.65",
+    "threat_score": 66.97,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:14:08",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.3917,
+    "l2_lstm_attack_score": 0.3563,
+    "l2_emb_attack_score": 0.9965,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.669654,
+      "network_score_with_rules": 0.669654
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.96",
+    "threat_score": 60.47,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:14:13",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.3686,
+    "l2_lstm_attack_score": 0.4193,
+    "l2_emb_attack_score": 0.0003,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.56967,
+      "network_score_with_rules": 0.60467
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.10",
+    "threat_score": 67.32,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:14:17",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5049,
+    "l2_lstm_attack_score": 0.3505,
+    "l2_emb_attack_score": 0.9994,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.673236,
+      "network_score_with_rules": 0.673236
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.114",
+    "threat_score": 69.98,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:14:19",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 43.3206,
+    "l2_lstm_attack_score": 0.165,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.664799,
+      "network_score_with_rules": 0.699799
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.203",
+    "threat_score": 67.66,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:14:24",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5537,
+    "l2_lstm_attack_score": 0.3813,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.676575,
+      "network_score_with_rules": 0.676575
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.79",
+    "threat_score": 67.79,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:14:33",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.2135,
+    "l2_lstm_attack_score": 0.4081,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.677869,
+      "network_score_with_rules": 0.677869
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.148",
+    "threat_score": 72.03,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:14:52",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.4289,
+    "l2_lstm_attack_score": 0.4979,
+    "l2_emb_attack_score": 0.9936,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.68534,
+      "network_score_with_rules": 0.72034
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.0.186",
+    "threat_score": 69.13,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:15:02",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.1822,
+    "l2_lstm_attack_score": 0.5763,
+    "l2_emb_attack_score": 0.9863,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.691336,
+      "network_score_with_rules": 0.691336
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.28",
+    "threat_score": 67.37,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:15:10",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.7012,
+    "l2_lstm_attack_score": 0.3484,
+    "l2_emb_attack_score": 0.9985,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.673673,
+      "network_score_with_rules": 0.673673
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.148",
+    "threat_score": 69.54,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:15:30",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5509,
+    "l2_lstm_attack_score": 0.2935,
+    "l2_emb_attack_score": 0.9333,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.660446,
+      "network_score_with_rules": 0.695446
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.0.206",
+    "threat_score": 67.4,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:15:57",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.1499,
+    "l2_lstm_attack_score": 0.4058,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.673956,
+      "network_score_with_rules": 0.673956
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.33",
+    "threat_score": 67.35,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:16:04",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.44,
+    "l2_lstm_attack_score": 0.3721,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.673511,
+      "network_score_with_rules": 0.673511
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.218",
+    "threat_score": 68.58,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:16:21",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 9.0546,
+    "l2_lstm_attack_score": 0.4562,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.685838,
+      "network_score_with_rules": 0.685838
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.232",
+    "threat_score": 71.09,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:16:44",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.2011,
+    "l2_lstm_attack_score": 0.389,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.675909,
+      "network_score_with_rules": 0.710909
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.200",
+    "threat_score": 67.09,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:17:01",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.1463,
+    "l2_lstm_attack_score": 0.3411,
+    "l2_emb_attack_score": 0.9999,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.670864,
+      "network_score_with_rules": 0.670864
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.149",
+    "threat_score": 56.64,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:17:17",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 7.756,
+    "l2_lstm_attack_score": 0.4021,
+    "l2_emb_attack_score": 0.027,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.566399,
+      "network_score_with_rules": 0.566399
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.132",
+    "threat_score": 69.08,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:17:25",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.7418,
+    "l2_lstm_attack_score": 0.5334,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.690789,
+      "network_score_with_rules": 0.690789
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.23",
+    "threat_score": 59.66,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:17:28",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.3426,
+    "l2_lstm_attack_score": 0.3366,
+    "l2_emb_attack_score": 0.0029,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.56158,
+      "network_score_with_rules": 0.59658
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.26",
+    "threat_score": 68.57,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:17:37",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.822,
+    "l2_lstm_attack_score": 0.463,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.685735,
+      "network_score_with_rules": 0.685735
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.77",
+    "threat_score": 61.7,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:17:40",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.2885,
+    "l2_lstm_attack_score": 0.5304,
+    "l2_emb_attack_score": 0.3484,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.617046,
+      "network_score_with_rules": 0.617046
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.178",
+    "threat_score": 71.35,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:17:48",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5527,
+    "l2_lstm_attack_score": 0.4001,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.678451,
+      "network_score_with_rules": 0.713451
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.128",
+    "threat_score": 67.53,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:18:47",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.985,
+    "l2_ae_ratio": 8.3454,
+    "l2_lstm_attack_score": 0.4392,
+    "l2_emb_attack_score": 0.9898,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.675311,
+      "network_score_with_rules": 0.675311
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.212",
+    "threat_score": 68.28,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:18:54",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.3485,
+    "l2_lstm_attack_score": 0.452,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.682827,
+      "network_score_with_rules": 0.682827
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.230",
+    "threat_score": 67.22,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:19:02",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 45.3531,
+    "l2_lstm_attack_score": 0.2364,
+    "l2_emb_attack_score": 0.6692,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.637248,
+      "network_score_with_rules": 0.672248
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.201",
+    "threat_score": 67.24,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:19:07",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.3583,
+    "l2_lstm_attack_score": 0.3647,
+    "l2_emb_attack_score": 0.9996,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.672393,
+      "network_score_with_rules": 0.672393
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.124",
+    "threat_score": 68.42,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:19:24",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.3965,
+    "l2_lstm_attack_score": 0.5063,
+    "l2_emb_attack_score": 0.6589,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.649234,
+      "network_score_with_rules": 0.684234
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.0.32",
+    "threat_score": 68.97,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:19:27",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.3903,
+    "l2_lstm_attack_score": 0.5202,
+    "l2_emb_attack_score": 0.9986,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.689663,
+      "network_score_with_rules": 0.689663
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.113",
+    "threat_score": 73.23,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:19:31",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.3356,
+    "l2_lstm_attack_score": 0.5972,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.697294,
+      "network_score_with_rules": 0.732294
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.112",
+    "threat_score": 56.84,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:19:33",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.6073,
+    "l2_lstm_attack_score": 0.2726,
+    "l2_emb_attack_score": 0.129,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.568397,
+      "network_score_with_rules": 0.568397
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.36",
+    "threat_score": 69.29,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:19:37",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 7.9362,
+    "l2_lstm_attack_score": 0.5879,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.692898,
+      "network_score_with_rules": 0.692898
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.103",
+    "threat_score": 68.66,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:19:43",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.3126,
+    "l2_lstm_attack_score": 0.491,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.686578,
+      "network_score_with_rules": 0.686578
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.179",
+    "threat_score": 63.32,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:19:45",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 42.3535,
+    "l2_lstm_attack_score": 0.282,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.598202,
+      "network_score_with_rules": 0.633202
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.111",
+    "threat_score": 59.81,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:20:02",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.3069,
+    "l2_lstm_attack_score": 0.3701,
+    "l2_emb_attack_score": 0.0026,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.563051,
+      "network_score_with_rules": 0.598051
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.188",
+    "threat_score": 67.42,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:20:21",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.5169,
+    "l2_lstm_attack_score": 0.393,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.674202,
+      "network_score_with_rules": 0.674202
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.177",
+    "threat_score": 68.85,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:20:32",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.225,
+    "l2_lstm_attack_score": 0.5138,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.68849,
+      "network_score_with_rules": 0.68849
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.128",
+    "threat_score": 68.81,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:20:42",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 7.8831,
+    "l2_lstm_attack_score": 0.526,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.688145,
+      "network_score_with_rules": 0.688145
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.196",
+    "threat_score": 68.46,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:20:52",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.1534,
+    "l2_lstm_attack_score": 0.486,
+    "l2_emb_attack_score": 0.9928,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.684606,
+      "network_score_with_rules": 0.684606
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.15",
+    "threat_score": 67.73,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:21:03",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.3341,
+    "l2_lstm_attack_score": 0.3978,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.677342,
+      "network_score_with_rules": 0.677342
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.79",
+    "threat_score": 71.17,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:21:21",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.9375,
+    "l2_lstm_attack_score": 0.3906,
+    "l2_emb_attack_score": 0.9799,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.676675,
+      "network_score_with_rules": 0.711675
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.127",
+    "threat_score": 72.22,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:21:35",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5457,
+    "l2_lstm_attack_score": 0.4874,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.687154,
+      "network_score_with_rules": 0.722154
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.0.140",
+    "threat_score": 70.72,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:22:00",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 43.9167,
+    "l2_lstm_attack_score": 0.2555,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.672151,
+      "network_score_with_rules": 0.707151
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.11",
+    "threat_score": 68.21,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:22:15",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.6499,
+    "l2_lstm_attack_score": 0.4561,
+    "l2_emb_attack_score": 0.9941,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.682072,
+      "network_score_with_rules": 0.682072
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.33",
+    "threat_score": 68.29,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:22:19",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.1028,
+    "l2_lstm_attack_score": 0.4805,
+    "l2_emb_attack_score": 0.9999,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.682916,
+      "network_score_with_rules": 0.682916
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.184",
+    "threat_score": 67.91,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:22:22",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.1937,
+    "l2_lstm_attack_score": 0.4555,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.679119,
+      "network_score_with_rules": 0.679119
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.24",
+    "threat_score": 71.86,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:22:43",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.4613,
+    "l2_lstm_attack_score": 0.455,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.683581,
+      "network_score_with_rules": 0.718581
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.39",
+    "threat_score": 62.03,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:23:01",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.8157,
+    "l2_lstm_attack_score": 0.5547,
+    "l2_emb_attack_score": 0.0037,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.585285,
+      "network_score_with_rules": 0.620285
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.38",
+    "threat_score": 67.22,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:23:04",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.395,
+    "l2_lstm_attack_score": 0.3614,
+    "l2_emb_attack_score": 0.9999,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.672247,
+      "network_score_with_rules": 0.672247
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.164",
+    "threat_score": 61.12,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:23:12",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.4119,
+    "l2_lstm_attack_score": 0.4631,
+    "l2_emb_attack_score": 0.0178,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.576154,
+      "network_score_with_rules": 0.611154
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.150",
+    "threat_score": 67.73,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:23:32",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.2514,
+    "l2_lstm_attack_score": 0.4177,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.67729,
+      "network_score_with_rules": 0.67729
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.102",
+    "threat_score": 62.9,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:23:33",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 44.4148,
+    "l2_lstm_attack_score": 0.2399,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.593994,
+      "network_score_with_rules": 0.628994
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.194",
+    "threat_score": 68.25,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:23:52",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.4061,
+    "l2_lstm_attack_score": 0.4894,
+    "l2_emb_attack_score": 0.9609,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.682502,
+      "network_score_with_rules": 0.682502
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.207",
+    "threat_score": 70.93,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:24:19",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.6653,
+    "l2_lstm_attack_score": 0.3887,
+    "l2_emb_attack_score": 0.9998,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.67431,
+      "network_score_with_rules": 0.70931
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.95",
+    "threat_score": 69.57,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:24:30",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.5476,
+    "l2_lstm_attack_score": 0.5899,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.695715,
+      "network_score_with_rules": 0.695715
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.224",
+    "threat_score": 71.42,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:24:42",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.0505,
+    "l2_lstm_attack_score": 0.4473,
+    "l2_emb_attack_score": 0.9986,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.679208,
+      "network_score_with_rules": 0.714208
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.0.155",
+    "threat_score": 66.81,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:24:47",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5557,
+    "l2_lstm_attack_score": 0.4559,
+    "l2_emb_attack_score": 0.8548,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.668066,
+      "network_score_with_rules": 0.668066
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.84",
+    "threat_score": 70.75,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:25:01",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.4016,
+    "l2_lstm_attack_score": 0.3806,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.672505,
+      "network_score_with_rules": 0.707505
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.49",
+    "threat_score": 68.14,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:25:13",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.0764,
+    "l2_lstm_attack_score": 0.4499,
+    "l2_emb_attack_score": 0.9994,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.681378,
+      "network_score_with_rules": 0.681378
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.40",
+    "threat_score": 63.53,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:25:15",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 42.3378,
+    "l2_lstm_attack_score": 0.3028,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.600278,
+      "network_score_with_rules": 0.635278
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.145",
+    "threat_score": 62.06,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:25:49",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 43.4464,
+    "l2_lstm_attack_score": 0.1561,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.585613,
+      "network_score_with_rules": 0.620613
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.115",
+    "threat_score": 68.34,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:25:53",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.985,
+    "l2_ae_ratio": 8.0188,
+    "l2_lstm_attack_score": 0.5295,
+    "l2_emb_attack_score": 0.9942,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.683402,
+      "network_score_with_rules": 0.683402
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.26",
+    "threat_score": 57.62,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:26:07",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.6875,
+    "l2_lstm_attack_score": 0.414,
+    "l2_emb_attack_score": 0.0533,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.576212,
+      "network_score_with_rules": 0.576212
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.243",
+    "threat_score": 56.41,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:26:11",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.2308,
+    "l2_lstm_attack_score": 0.3688,
+    "l2_emb_attack_score": 0.0006,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.564077,
+      "network_score_with_rules": 0.564077
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.50",
+    "threat_score": 69.14,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:26:17",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.8779,
+    "l2_lstm_attack_score": 0.5178,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.691407,
+      "network_score_with_rules": 0.691407
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.116",
+    "threat_score": 64.7,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:26:21",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.3911,
+    "l2_lstm_attack_score": 0.4039,
+    "l2_emb_attack_score": 0.7473,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.646991,
+      "network_score_with_rules": 0.646991
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.235",
+    "threat_score": 67.59,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:26:25",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5829,
+    "l2_lstm_attack_score": 0.3737,
+    "l2_emb_attack_score": 0.9999,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.675921,
+      "network_score_with_rules": 0.675921
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.58",
+    "threat_score": 68.76,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:26:37",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.608,
+    "l2_lstm_attack_score": 0.4895,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.687603,
+      "network_score_with_rules": 0.687603
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.181",
+    "threat_score": 69.26,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:26:41",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 43.5769,
+    "l2_lstm_attack_score": 0.1099,
+    "l2_emb_attack_score": 0.9999,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.657583,
+      "network_score_with_rules": 0.692583
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.59",
+    "threat_score": 72.84,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:27:00",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.3741,
+    "l2_lstm_attack_score": 0.5569,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.693424,
+      "network_score_with_rules": 0.728424
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.0.86",
+    "threat_score": 66.86,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:27:25",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.3007,
+    "l2_lstm_attack_score": 0.3287,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.668596,
+      "network_score_with_rules": 0.668596
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.79",
+    "threat_score": 71.2,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:27:28",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 44.2358,
+    "l2_lstm_attack_score": 0.2874,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.677037,
+      "network_score_with_rules": 0.712037
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.193",
+    "threat_score": 67.77,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:27:38",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.4648,
+    "l2_lstm_attack_score": 0.3959,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.677684,
+      "network_score_with_rules": 0.677684
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.15",
+    "threat_score": 70.02,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:27:39",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 43.9764,
+    "l2_lstm_attack_score": 0.1689,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.665191,
+      "network_score_with_rules": 0.700191
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.162",
+    "threat_score": 69.53,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:27:44",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.2936,
+    "l2_lstm_attack_score": 0.5794,
+    "l2_emb_attack_score": 0.9999,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.695326,
+      "network_score_with_rules": 0.695326
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.229",
+    "threat_score": 67.41,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:28:01",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.044,
+    "l2_lstm_attack_score": 0.4124,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.674145,
+      "network_score_with_rules": 0.674145
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.149",
+    "threat_score": 67.64,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:28:13",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.223,
+    "l2_lstm_attack_score": 0.4105,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.67644,
+      "network_score_with_rules": 0.67644
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.207",
+    "threat_score": 70.84,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:28:35",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 43.2031,
+    "l2_lstm_attack_score": 0.2683,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.673433,
+      "network_score_with_rules": 0.708433
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.47",
+    "threat_score": 68.48,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:28:49",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.7471,
+    "l2_lstm_attack_score": 0.4565,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.684812,
+      "network_score_with_rules": 0.684812
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.223",
+    "threat_score": 70.86,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:28:53",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.6767,
+    "l2_lstm_attack_score": 0.3653,
+    "l2_emb_attack_score": 0.9988,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.673613,
+      "network_score_with_rules": 0.708613
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.0.55",
+    "threat_score": 71.41,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:28:57",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 44.9602,
+    "l2_lstm_attack_score": 0.3082,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.679124,
+      "network_score_with_rules": 0.714124
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.188",
+    "threat_score": 64.54,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:29:18",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.8111,
+    "l2_lstm_attack_score": 0.4037,
+    "l2_emb_attack_score": 0.7031,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.645403,
+      "network_score_with_rules": 0.645403
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.81",
+    "threat_score": 68.22,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:29:27",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.4856,
+    "l2_lstm_attack_score": 0.4609,
+    "l2_emb_attack_score": 0.9964,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.682175,
+      "network_score_with_rules": 0.682175
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.213",
+    "threat_score": 67.62,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:29:39",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.0059,
+    "l2_lstm_attack_score": 0.4467,
+    "l2_emb_attack_score": 0.9892,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.67621,
+      "network_score_with_rules": 0.67621
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.127",
+    "threat_score": 71.94,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:29:44",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.99,
+    "l2_ae_ratio": 8.4913,
+    "l2_lstm_attack_score": 0.5038,
+    "l2_emb_attack_score": 0.993,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.684417,
+      "network_score_with_rules": 0.719417
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.98",
+    "threat_score": 67.84,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:29:53",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.6073,
+    "l2_lstm_attack_score": 0.4141,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.678358,
+      "network_score_with_rules": 0.678358
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.0.169",
+    "threat_score": 67.79,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:30:03",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.8706,
+    "l2_lstm_attack_score": 0.3829,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.677888,
+      "network_score_with_rules": 0.677888
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.203",
+    "threat_score": 63.73,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:30:17",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 42.4629,
+    "l2_lstm_attack_score": 0.3236,
+    "l2_emb_attack_score": 0.9998,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.602339,
+      "network_score_with_rules": 0.637339
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.0.175",
+    "threat_score": 67.92,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:30:24",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5006,
+    "l2_lstm_attack_score": 0.501,
+    "l2_emb_attack_score": 0.9171,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.679212,
+      "network_score_with_rules": 0.679212
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.23",
+    "threat_score": 71.95,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:30:43",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.2208,
+    "l2_lstm_attack_score": 0.4917,
+    "l2_emb_attack_score": 0.9837,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.684475,
+      "network_score_with_rules": 0.719475
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.47",
+    "threat_score": 65.77,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:30:49",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.146,
+    "l2_lstm_attack_score": 0.4661,
+    "l2_emb_attack_score": 0.7825,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.657745,
+      "network_score_with_rules": 0.657745
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.2.172",
+    "threat_score": 70.97,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:30:51",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 44.5998,
+    "l2_lstm_attack_score": 0.2638,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.674681,
+      "network_score_with_rules": 0.709681
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.1.198",
+    "threat_score": 71.87,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:30:55",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.5827,
+    "l2_lstm_attack_score": 0.4519,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.683742,
+      "network_score_with_rules": 0.718742
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.3.180",
+    "threat_score": 67.42,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:31:16",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 0.995,
+    "l2_ae_ratio": 8.1927,
+    "l2_lstm_attack_score": 0.3894,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.674209,
+      "network_score_with_rules": 0.674209
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.1.214",
+    "threat_score": 62.88,
+    "severity": "Medium",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "Medium: open analyst review ticket, inspect source/destination context, and keep traffic under enhanced observation.",
+    "status": "new",
+    "ts": "2017-03-07 09:31:20",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 44.9955,
+    "l2_lstm_attack_score": 0.2377,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.593771,
+      "network_score_with_rules": 0.628771
+    },
+    "triggered_rules": [
+      "unusual_destination_port"
+    ],
+    "reason": "rule+ml fusion"
+  },
+  {
+    "ip": "192.168.2.153",
+    "threat_score": 67.69,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:31:25",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.7121,
+    "l2_lstm_attack_score": 0.3785,
+    "l2_emb_attack_score": 1.0,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.67689,
+      "network_score_with_rules": 0.67689
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  },
+  {
+    "ip": "192.168.3.22",
+    "threat_score": 67.12,
+    "severity": "High",
+    "siem_failed_login": 0,
+    "siem_config_change": 0,
+    "recommendation": "High: tighten monitoring, validate SIEM events, and prepare rapid containment playbook if activity continues.",
+    "status": "new",
+    "ts": "2017-03-07 09:31:28",
+    "l1_triggered": true,
+    "l2_rf_attack_score": 1.0,
+    "l2_ae_ratio": 8.6293,
+    "l2_lstm_attack_score": 0.3688,
+    "l2_emb_attack_score": 0.9598,
+    "l2_hdr_cnn_attack_score": 0.0,
+    "l2_lstm_pkt_score": 0.0,
+    "model_signals": {
+      "network_score": 0.671197,
+      "network_score_with_rules": 0.671197
+    },
+    "triggered_rules": [],
+    "reason": "ml-only"
+  }
+]

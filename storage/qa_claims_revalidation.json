@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "confirmed": 4,
+    "rejected": 0
+  },
+  "bugs": {
+    "BUG-001": {
+      "status": "CONFIRMED",
+      "evidence": {
+        "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe scripts/03_run_detection_batch.py --help",
+        "rc": 0,
+        "stdout": "usage: 03_run_detection_batch.py [-h] [--data DATA] [--limit LIMIT]\n                                 [--output-alerts OUTPUT_ALERTS] [--no-lstm]\n                                 [--no-embedding] [--parquet-cache]\n                                 [--csv-engine {,c,pyarrow}] [--benchmark]\n                                 [--parallel-l2]\n                                 [--packet-lstm-scores PACKET_LSTM_SCORES]\n                                 [--stream-chunk-rows STREAM_CHUNK_ROWS]\n                                 [--log-wall-time]\n\noptions:\n  -h, --help            show this help message and exit\n  --data DATA\n  --limit LIMIT         Макс. строк flows.csv (0 = весь файл). Чтение через\n                        nrows — не загружает весь CSV в RAM.\n  --output-alerts OUTPUT_ALERTS\n  --no-lstm             Skip LSTM inference\n  --no-embedding        Skip embedding classifier\n  --parquet-cache       Кэш parquet рядом с CSV (data/processed/.cache/) для\n                        повторных запусков с тем же --limit.\n  --csv-engine {,c,pyarrow}\n                        Движок pandas.read_csv (pyarrow быстрее при\n                        установленном pyarrow; при ошибке — fallback).\n  --benchmark           Вывести top-40 по cProfile после прогона (узкие места\n                        инференса).\n  --parallel-l2         Скоринг L2 для всех потоков без гейта L1 (отчёт;\n                        игнорирует l2_only_after_l1 в YAML на этот запуск).\n  --packet-lstm-scores PACKET_LSTM_SCORES\n                        NPZ с flow_keys и scores\n                        (scripts/21_train_packet_lstm.py ->\n                        packet_lstm_scores.npz); слияние по flow_key.\n  --stream-chunk-rows STREAM_CHUNK_ROWS\n                        Режим «streaming batch»: читать CSV чанками pandas (0\n                        = один проход как раньше).\n  --log-wall-time       Печатать wall-clock времени по чанкам / всему прогону.\n",
+        "stderr": ""
+      }
+    },
+    "BUG-002": {
+      "status": "CONFIRMED",
+      "evidence": {
+        "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py prepare --input C:\\Users\\user\\Desktop\\ids-ml-project\\data\\raw\\qa_bug002_utf16.csv",
+        "rc": 1,
+        "stdout": "",
+        "stderr": "Не удалось прочитать CSV в UTF-8. Преобразуйте файл в UTF-8 (без BOM) и повторите prepare.\n",
+        "flows_hash_before": "2a3add18ddb22e828e946b1e3906e61ad54b18ba18e463bb3fe5f07416e0bf06",
+        "flows_hash_after": "2a3add18ddb22e828e946b1e3906e61ad54b18ba18e463bb3fe5f07416e0bf06"
+      }
+    },
+    "BUG-003": {
+      "status": "CONFIRMED",
+      "evidence": {
+        "prepare": {
+          "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py prepare --input C:\\Users\\user\\Desktop\\ids-ml-project\\data\\raw\\qa_bug003_tiny.csv",
+          "rc": 0,
+          "stdout": "Предупреждение (инварианты данных): Все hb_* равны нулю — CNN заголовков будет пропущен при train; проверьте NPZ и scripts/16_build_header_byte_dataset.py + тот же день PCAP/CSV.\nWrote C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows.csv with shape (1, 1034)\n",
+          "stderr": ""
+        },
+        "train": {
+          "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py train --skip-torch",
+          "rc": 1,
+          "stdout": "Skipping IF aggregates: not enough time buckets.\n",
+          "stderr": "RandomForest training skipped: RandomForest training requires at least 2 rows after prepare; got 1.\n"
+        }
+      }
+    },
+    "BUG-004": {
+      "status": "CONFIRMED",
+      "evidence": {
+        "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe scripts/04_run_online_loop.py",
+        "rc": 1,
+        "stdout": "",
+        "stderr": "Некорректный online.retrain_interval_minutes: 'bad-value'\n"
+      }
+    }
+  }
+}

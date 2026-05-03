@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-04-28T18:51:16Z",
+  "git_hash": null,
+  "alerts_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json",
+  "online_outcome_global": {
+    "status": "skipped",
+    "reason": "need >= 5000 rows"
+  },
+  "usage_parse_error": null,
+  "models": [
+    {
+      "model": "rf",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib",
+          "size_bytes": 101033,
+          "mtime": "2026-04-28T21:51:02"
+        },
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_label_encoder.joblib",
+          "size_bytes": 491,
+          "mtime": "2026-04-28T21:51:02"
+        }
+      ],
+      "last_train_metrics": {
+        "accuracy": 0.725625,
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib"
+      },
+      "used_in_last_detect": false,
+      "last_online_outcome": null
+    },
+    {
+      "model": "if_flow",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib",
+          "size_bytes": 769641,
+          "mtime": "2026-04-28T21:51:01"
+        }
+      ],
+      "last_train_metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib"
+      },
+      "used_in_last_detect": false,
+      "last_online_outcome": {
+        "status": "skipped",
+        "reason": "need >= 5000 rows"
+      }
+    },
+    {
+      "model": "if_agg",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+          "size_bytes": 48217,
+          "mtime": "2026-04-28T21:51:02"
+        }
+      ],
+      "last_train_metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+        "aggregate_rows": 400,
+        "aggregate_freq": "1min"
+      },
+      "used_in_last_detect": false,
+      "last_online_outcome": {
+        "status": "skipped",
+        "reason": "need >= 5000 rows"
+      }
+    },
+    {
+      "model": "ae",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\ae_model.pt",
+          "size_bytes": 550235,
+          "mtime": "2026-04-28T21:51:06"
+        }
+      ],
+      "last_train_metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\ae_model.pt",
+        "threshold": 0.4535253643989563,
+        "val_mse_mean": 0.09511754661798477
+      },
+      "used_in_last_detect": false,
+      "last_online_outcome": null
+    },
+    {
+      "model": "lstm",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_model.pt",
+          "size_bytes": 1122489,
+          "mtime": "2026-04-28T21:51:13"
+        },
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_label_encoder.joblib",
+          "size_bytes": 518,
+          "mtime": "2026-04-28T21:51:13"
+        }
+      ],
+      "last_train_metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_model.pt",
+        "val_f1": 0.20834852351440028
+      },
+      "used_in_last_detect": false,
+      "last_online_outcome": null
+    },
+    {
+      "model": "embedding",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_classifier.pt",
+          "size_bytes": 292081,
+          "mtime": "2026-04-28T21:51:16"
+        },
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_proto_encoder.joblib",
+          "size_bytes": 482,
+          "mtime": "2026-04-28T21:51:16"
+        },
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_port_encoder.joblib",
+          "size_bytes": 501,
+          "mtime": "2026-04-28T21:51:16"
+        }
+      ],
+      "last_train_metrics": {
+        "path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_classifier.pt",
+        "last_epoch_loss": 0.6377764940261841,
+        "train_acc": 0.725625,
+        "val_acc": 0.714375,
+        "oov_port_fraction": 0.0,
+        "oov_proto_fraction": 0.0
+      },
+      "used_in_last_detect": false,
+      "last_online_outcome": null
+    },
+    {
+      "model": "raw_header_cnn",
+      "ready_for_detect": true,
+      "artifacts": [
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn.pt",
+          "size_bytes": 93993,
+          "mtime": "2026-04-25T14:02:09"
+        },
+        {
+          "artifact_exists": true,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn_label_encoder.joblib",
+          "size_bytes": 500,
+          "mtime": "2026-04-25T14:02:09"
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": false,
+      "last_online_outcome": null
+    },
+    {
+      "model": "lstm_packets",
+      "ready_for_detect": false,
+      "artifacts": [
+        {
+          "artifact_exists": false,
+          "artifact_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_packets_model.pt",
+          "size_bytes": 0,
+          "mtime": null
+        }
+      ],
+      "last_train_metrics": {},
+      "used_in_last_detect": false,
+      "last_online_outcome": null
+    }
+  ]
+}

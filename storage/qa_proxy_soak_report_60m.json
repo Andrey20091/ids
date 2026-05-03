@@ -1,0 +1,22 @@
+{
+  "started_at": 1777637928.1591034,
+  "ended_at": 1777641593.5175407,
+  "elapsed_seconds": 3665.358,
+  "ticks": 37,
+  "ingest_ok": 37,
+  "ingest_fail": 0,
+  "detect_ok": 37,
+  "detect_fail": 0,
+  "realtime_ok": 37,
+  "realtime_fail": 0,
+  "exceptions": 0,
+  "all_steps_ok": true,
+  "failure_events": 0,
+  "alerts_count_min": 0,
+  "alerts_count_max": 0,
+  "alerts_count_last": 0,
+  "avg_ingest_seconds": 0.1071,
+  "avg_detect_seconds": 11.6324,
+  "avg_realtime_seconds": 20.0352,
+  "silent_loss_detected": false
+}

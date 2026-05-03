@@ -1,0 +1,133 @@
+{
+  "timestamp": "2026-05-01T11:41:10Z",
+  "dataset_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows.csv",
+  "dataset_rows": 8000,
+  "config_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\config\\settings.yaml",
+  "features_yaml_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\config\\feature_columns.yaml",
+  "config_hash": "b4f9b8fd7bce148625f6486310c723630a9e2c907d8c5c3173138c18c1c877e0",
+  "git_hash": null,
+  "training_profile": "development",
+  "dataset_tag": "cicids2017",
+  "dataset_source": "CICIDS2017",
+  "train_mode": "baseline",
+  "policy_decision": "allowed",
+  "training_policy": {
+    "enforce_cicids_baseline": true,
+    "require_baseline_before_online": true,
+    "prohibit_full_retrain_on_new_data": true,
+    "cicids_tag_values": [
+      "cicids2017",
+      "cicids",
+      "baseline_cicids2017"
+    ],
+    "baseline_manifest_path": "storage/baseline_manifest.json",
+    "allow_force_rebaseline": true,
+    "disallow_skip_torch_for_baseline": false
+  },
+  "random_state": 42,
+  "models": {
+    "rf": {
+      "train_status": "ok",
+      "metrics": {
+        "accuracy": 1.0,
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib"
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_model.joblib",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\rf_label_encoder.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "if_flow": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib"
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "if_agg": {
+      "train_status": "ok",
+      "metrics": {
+        "model_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+        "aggregate_rows": 400,
+        "aggregate_freq": "1min"
+      },
+      "warnings": [],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_model_agg.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "ae": {
+      "train_status": "skipped",
+      "metrics": {},
+      "warnings": [
+        "--skip-torch enabled"
+      ],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\ae_model.pt"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "lstm": {
+      "train_status": "skipped",
+      "metrics": {},
+      "warnings": [
+        "--skip-torch enabled"
+      ],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_model.pt",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\lstm_label_encoder.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "embedding": {
+      "train_status": "skipped",
+      "metrics": {},
+      "warnings": [
+        "--skip-torch enabled"
+      ],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_classifier.pt",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_proto_encoder.joblib",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\embedding_port_encoder.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    },
+    "raw_header_cnn": {
+      "train_status": "skipped",
+      "metrics": {},
+      "warnings": [
+        "--skip-torch enabled"
+      ],
+      "artifacts": [
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn.pt",
+        "C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\raw_header_cnn_label_encoder.joblib"
+      ],
+      "artifact_exists": true,
+      "detect_participation_ready": true
+    }
+  },
+  "hb_signal_quality": {
+    "hb_columns_total": 960,
+    "hb_columns_present": 960,
+    "nonzero_fraction": 0.40002357,
+    "variance_mean": 3900.78953265654,
+    "signal_quality": "good",
+    "warning": ""
+  },
+  "warnings": [],
+  "baseline_path": "C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\model_baselines.json"
+}

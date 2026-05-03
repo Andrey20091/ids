@@ -1,0 +1,19 @@
+# Core (Python 3.10–3.12 рекомендованы; для 3.13+ проверьте наличие wheel у зависимостей)
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+PyYAML>=6.0
+joblib>=1.3.0
+requests>=2.31.0
+streamlit>=1.28.0
+plotly>=5.18.0
+
+# Тесты: pip install pytest
+pytest>=7.0.0
+
+# PCAP / сырые заголовки (scripts/15, 16) и proxy-инструменты
+scapy>=2.5.0
+# GeoIP карта (нужен файл GeoLite2-City.mmdb + geoip.city_db или GEOIP2_CITY_DB)
+geoip2>=4.7.0
+
+# PyTorch (AE/LSTM): см. requirements-ml.txt или --skip-torch в 02_train_all.py

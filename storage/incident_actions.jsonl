@@ -1,0 +1,4 @@
+{"action_id": "act_20260413_114306", "incident_id": "inc_30c0c4e49d7d", "ts": "2026-04-13T11:43:06Z", "actor": "cli_user", "action": "set_status", "old_value": "new", "new_value": "triaged", "comment": "smoke"}
+{"action_id": "act_20260413_114614", "incident_id": "inc_30c0c4e49d7d", "ts": "2026-04-13T11:46:14Z", "actor": "cli_user", "action": "set_status", "old_value": "new", "new_value": "triaged", "comment": "smoke2"}
+{"action_id": "act_20260416_073917", "incident_id": "inc_30c0c4e49d7d", "ts": "2026-04-16T07:39:17Z", "actor": "cli_user", "action": "set_status", "old_value": "new", "new_value": "triaged", "comment": "manual review"}
+{"action_id": "act_20260416_161558", "incident_id": "inc_aa0a3ee75b83", "ts": "2026-04-16T16:15:58Z", "actor": "qa_user", "action": "set_status", "old_value": "new", "new_value": "triaged", "comment": "smoke-test"}

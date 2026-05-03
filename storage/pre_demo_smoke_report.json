@@ -1,0 +1,59 @@
+{
+  "mode": {
+    "with_soak": false,
+    "with_perf": false
+  },
+  "overall_status": "PASS",
+  "gates": {
+    "all_steps_rc_zero": true,
+    "claims_revalidation": true,
+    "e2e_validation": true,
+    "dashboard_ux_protocol": true,
+    "siem_soak": true,
+    "perf_baseline": true
+  },
+  "steps": [
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe -c import sklearn, torch, streamlit, pandas, yaml; print('deps_ok')",
+      "rc": 0,
+      "seconds": 4.22,
+      "stdout_tail": "deps_ok",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe scripts/qa_claims_revalidation.py",
+      "rc": 0,
+      "seconds": 14.465,
+      "stdout_tail": "        \"rc\": 1,\n        \"stdout\": \"\",\n        \"stderr\": \"Некорректный online.retrain_interval_minutes: 'bad-value'\\n\"\n      }\n    }\n  }\n}\nSaved claims report: C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\qa_claims_revalidation.json",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe scripts/qa_e2e_validation.py",
+      "rc": 0,
+      "seconds": 99.826,
+      "stdout_tail": "  \"dashboard_smoke\": {\n    \"cmd\": \"C:\\\\Users\\\\user\\\\Desktop\\\\ids-ml-project\\\\.venv\\\\Scripts\\\\python.exe -m streamlit run dashboard/app.py --server.headless true --server.port 8798\",\n    \"started\": true,\n    \"port\": 8798,\n    \"log_tail\": \"\\n  You can now view your Streamlit app in your browser.\\n\\n  Local URL: http://localhost:8798\"\n  }\n}\nSaved E2E report: C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\qa_e2e_validation.json",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe scripts/qa_dashboard_ux_protocol.py",
+      "rc": 0,
+      "seconds": 0.711,
+      "stdout_tail": "      \"status\": \"PASS\",\n      \"details\": {\n        \"incident_id\": \"inc_30c0c4e49d7d\"\n      }\n    }\n  ]\n}\nSaved protocol: C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\qa_dashboard_ux_protocol.json",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe -m pytest tests -q --tb=short",
+      "rc": 0,
+      "seconds": 9.741,
+      "stdout_tail": ".................................................                        [100%]\n49 passed in 7.53s",
+      "stderr_tail": ""
+    }
+  ],
+  "artifacts": {
+    "claims": "storage/qa_claims_revalidation.json",
+    "e2e": "storage/qa_e2e_validation.json",
+    "ux": "storage/qa_dashboard_ux_protocol.json",
+    "soak": null,
+    "perf": null
+  }
+}

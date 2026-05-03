@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-04-16T15:36:07.650258Z",
+  "note": "Scoring calibration summary",
+  "recommendation": {
+    "operating_threshold": 45,
+    "reason": "Best F1 without FP increase on control set"
+  },
+  "current_at_55": {
+    "precision": 1.0,
+    "recall": 0.03143507972665148,
+    "f1": 0.060954063604240286,
+    "fp": 0,
+    "fn": 2126
+  },
+  "recommended_at_45": {
+    "precision": 1.0,
+    "recall": 0.03325740318906606,
+    "f1": 0.06437389770723104,
+    "fp": 0,
+    "fn": 2122
+  },
+  "delta_recommended_minus_current": {
+    "precision": 0.0,
+    "recall": 0.00182232346241458,
+    "f1": 0.003419834102990754,
+    "fp": 0,
+    "fn": -4
+  },
+  "distribution_check": {
+    "current_top_nonzero_value": 81.04,
+    "current_top_nonzero_share": 0.175,
+    "max_score_no_clamp_100": 88.99
+  }
+}

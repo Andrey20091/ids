@@ -1,0 +1,61 @@
+{
+  "dataset_context": {
+    "base_rows": 8000,
+    "repeat_factor": 20,
+    "large_rows": 160000,
+    "raw_file": "C:\\Users\\user\\Desktop\\ids-ml-project\\data\\raw\\qa_perf_large.csv",
+    "note": "RAM/CPU telemetry unavailable (psutil not installed); wall-clock only.",
+    "medium_torch_rows": 20000
+  },
+  "runs": [
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py prepare --input C:\\Users\\user\\Desktop\\ids-ml-project\\data\\raw\\qa_perf_large.csv",
+      "rc": 0,
+      "seconds": 73.019,
+      "stdout_tail": "Предупреждение (инварианты данных): Все hb_* равны нулю — CNN заголовков будет пропущен при train; проверьте NPZ и scripts/16_build_header_byte_dataset.py + тот же день PCAP/CSV.\nWrote C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows.csv with shape (160000, 1034)",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py train --skip-torch",
+      "rc": 0,
+      "seconds": 29.342,
+      "stdout_tail": "IsolationForest (aggregates): C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts\\if_agg_model.joblib\nRandomForest: {'accuracy': 0.725625, 'model_path': 'C:\\\\Users\\\\user\\\\Desktop\\\\ids-ml-project\\\\artifacts\\\\rf_model.joblib'}\nArtifacts in C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py detect --detect-limit 50000",
+      "rc": 0,
+      "seconds": 12.433,
+      "stdout_tail": "Wrote 0 alerts (capped 200 in file) to C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json\nПодсказка: 0 алертов — снизьте пороги в коде _should_alert, увеличьте --limit, или в config/settings.yaml выставьте pipeline.l2_only_after_l1: false и aggregation.syn_spike_multiplier поменьше (если используете строгий L1->L2).\nСтарт detect: alert_threshold=45.00",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py detect --detect-limit 50000 --detect-parallel-l2",
+      "rc": 0,
+      "seconds": 450.976,
+      "stdout_tail": "Detect config: alert_threshold=45.00\nWrote 57 alerts (capped 200 in file) to C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json\nСтарт detect: alert_threshold=45.00",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py detect --detect-limit 50000 --detect-stream-chunk-rows 5000 --detect-log-wall-time",
+      "rc": 0,
+      "seconds": 13.575,
+      "stdout_tail": "Wrote 0 alerts (capped 200 in file) to C:\\Users\\user\\Desktop\\ids-ml-project\\storage\\alerts_latest.json\nПодсказка: 0 алертов — снизьте пороги в коде _should_alert, увеличьте --limit, или в config/settings.yaml выставьте pipeline.l2_only_after_l1: false и aggregation.syn_spike_multiplier поменьше (если используете строгий L1->L2).\nСтарт detect: alert_threshold=45.00",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py prepare --input C:\\Users\\user\\Desktop\\ids-ml-project\\data\\raw\\qa_perf_medium_torch.csv",
+      "rc": 0,
+      "seconds": 12.287,
+      "stdout_tail": "Предупреждение (инварианты данных): Все hb_* равны нулю — CNN заголовков будет пропущен при train; проверьте NPZ и scripts/16_build_header_byte_dataset.py + тот же день PCAP/CSV.\nWrote C:\\Users\\user\\Desktop\\ids-ml-project\\data\\processed\\flows.csv with shape (20000, 1034)",
+      "stderr_tail": ""
+    },
+    {
+      "cmd": "C:\\Users\\user\\Desktop\\ids-ml-project\\.venv\\Scripts\\python.exe main.py train",
+      "rc": 0,
+      "seconds": 87.659,
+      "stdout_tail": "Embedding classifier: {'path': 'C:\\\\Users\\\\user\\\\Desktop\\\\ids-ml-project\\\\artifacts\\\\embedding_classifier.pt', 'last_epoch_loss': 0.6033614164666284, 'train_acc': 0.7254}\nSkipping raw header CNN: hb_* columns are all zero (build NPZ via 16_build_header_byte_dataset.py)\nArtifacts in C:\\Users\\user\\Desktop\\ids-ml-project\\artifacts",
+      "stderr_tail": ""
+    }
+  ]
+}
