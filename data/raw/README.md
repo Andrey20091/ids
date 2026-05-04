@@ -1,5 +1,7 @@
 # Сырые данные (`data/raw`)
 
+Перед командами ниже установите проект по **корневому `README.md` §4**: Python **3.11–3.12**, каталог **`.venv`**, `pip install -r requirements.txt`, затем работайте из активированного окружения (или `.\.venv\Scripts\python.exe …`).
+
 ## CICIDS2017
 
 Полные дневные CSV с полной схемой (IP, Timestamp, Flow ID) лежат в **`TrafficLabelling/`** в корне проекта после скачивания датасета ([CIC-IDS-2017](https://www.unb.ca/cic/datasets/ids-2017.html)). Каталог в репозитории не хранится — его нужно распаковать локально.

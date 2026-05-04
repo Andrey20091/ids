@@ -52,7 +52,7 @@
 | Папка / файл | Назначение |
 |----------------|------------|
 | **`main.py`** | Единая точка входа: все подкоманды (`detect`, `prepare`, `proxy`, …). Запускайте из корня проекта. |
-| **`pyproject.toml`** | Метаданные пакета и зависимости для установки через `pip install -e .`. |
+| **`pyproject.toml`** | Метаданные пакета; в т.ч. **`requires-python`** (сейчас **от 3.11 до 3.13 включительно**, не 3.14) и зависимости для `pip install -e .`. |
 | **`requirements.txt`** | Базовые зависимости (pandas, sklearn, PyYAML, …). |
 | **`requirements-ml.txt`** | Опционально: PyTorch и всё для «глубоких» моделей. |
 | **`.env.example`** | Пример переменных окружения (если используются в вашей среде). |
@@ -125,28 +125,105 @@
 
 ## 4. Установка и с чего начать
 
-### 4.1 Виртуальное окружение и пакеты
+Ниже — порядок **клонирование → версия Python → виртуальное окружение → установка пакетов → команды**. Все примеры с **`python`** и **`pip`** предполагают, что вы уже **активировали `.venv`** (или вызываете полный путь к `python.exe` из `.venv`).
+
+### 4.1 Версия Python
+
+В **`pyproject.toml`** задано **`requires-python = ">=3.11,<3.14"`** (совпадает с ожиданиями CI и наличием колёс PyTorch на Windows).
+
+| Версия | Комментарий |
+|--------|-------------|
+| **3.12** (рекомендуется) | Удобно ставить torch и полный L2-стек под Windows. |
+| **3.11** | Официально используется в GitHub Actions; полностью поддерживается. |
+| **3.14** | Вне диапазона `pyproject`; глобальный 3.14 часто **без** пакетов проекта — не подменяйте им `.venv`. |
+
+**Важно:** команды вроде `python main.py check` должны выполняться **тем же интерпретатором**, куда вы ставили `pip install -r requirements.txt`. Обычно это **`.\.venv\Scripts\python.exe`**, а не «первый попавшийся» Python из PATH.
+
+### 4.2 Клонирование репозитория
 
 ```powershell
-cd путь\к\ids-ml-project
-python -m venv .venv
-.\.venv\Scripts\activate
-python -m pip install -r requirements.txt
+git clone https://github.com/Andrey20091/ids.git
+cd ids
 ```
 
-Опционально PyTorch (CPU), если нужны автоэнкодер / LSTM и полный стек:
+Если вы клонировали в другую папку (`ids-ml-project` и т.д.), везде ниже используйте **ваш** путь вместо `ids`.
+
+### 4.3 Создание виртуального окружения `.venv`
+
+Окружение изолирует пакеты проекта от системного Python и совпадает с настройкой **`.vscode/settings.json`** (интерпретатор по умолчанию в Cursor/VS Code).
+
+**Автоматически** (если установлены **Python 3.12 или 3.11** и команда `py` их видит, например `py -0p`):
+
+```powershell
+cd путь\к\клону
+powershell -ExecutionPolicy Bypass -File scripts\setup_venv.ps1
+```
+
+Скрипт создаст **`.venv`**, обновит `pip` и выполнит `pip install -r requirements.txt`.
+
+**Вручную** (пример для 3.12):
+
+```powershell
+cd путь\к\клону
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -U pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+Если папки **`.venv` ещё нет**, `main.py check` напомнит создать её (`py -3.12 -m venv .venv` и далее команды из подсказки).
+
+### 4.4 Вход в окружение и работа «оттуда»
+
+После создания `.venv` **активируйте** его в терминале — тогда команда **`python`** будет указывать на нужный интерпретатор.
+
+**PowerShell** (из корня клона):
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Если политика выполнения блокирует скрипт: выполните один раз для текущего пользователя  
+`Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`  
+или запускайте без активации полным путём (см. ниже).
+
+**cmd.exe:**
+
+```bat
+cd /d путь\к\клону
+.venv\Scripts\activate.bat
+```
+
+**Без активации** (всегда работает, удобно в CI и при блокировке `Activate.ps1`):
+
+```powershell
+.\.venv\Scripts\python.exe main.py check
+```
+
+В корне есть **`run.cmd`**: он вызывает **`.\.venv\Scripts\python.exe`**, если `.venv` существует — можно писать `run.cmd main.py check`.
+
+Дальше в этом README под **`python`** имеется в виду **интерпретатор из активированного `.venv`** (или явный путь к нему).
+
+### 4.5 Опционально: PyTorch (AE, LSTM, embedding и т.д.)
+
+После активации `.venv`:
+
+```powershell
+python -m pip install -r requirements-ml.txt
+```
+
+Для CPU-версии с индексом PyTorch (если обычный `pip` не находит колесо):
 
 ```powershell
 python -m pip install -r requirements-ml.txt --index-url https://download.pytorch.org/whl/cpu
 ```
 
-Если torch не ставится — можно пользоваться **только Random Forest + Isolation Forest**, передавая **`--skip-torch`** или **`--allow-partial`** там, где это поддержано.
+Если torch не нужен — достаточно RF/IF: в обучении используйте **`--skip-torch`** или **`--allow-partial`**, где поддерживается.
 
-### 4.2 Кодировка консоли Windows
+### 4.6 Кодировка консоли Windows
 
-Если «кракозябры» вместо русского текста: включите UTF-8 (`chcp 65001`, `PYTHONUTF8=1`) или запускайте через **`run_utf8.cmd`**.
+Если «кракозябры» вместо русского текста: **`chcp 65001`**, переменная **`PYTHONUTF8=1`**, или запуск через **`run_utf8.cmd`**.
 
-### 4.3 Первые команды
+### 4.7 Первые команды
 
 ```powershell
 python main.py check          # проверка окружения
@@ -160,19 +237,19 @@ python main.py all --demo-mode   # демо: синтетика → prepare → 
 python main.py bootstrap
 ```
 
-### 4.4 После `git clone` с GitHub (важно)
+### 4.8 Что важно знать после `git clone`
 
-В репозитории **намеренно нет** большого `data/processed/flows.csv` (он в `.gitignore`, чтобы не раздувать git). Зато есть **код**, **конфиги**, **готовые веса** в `artifacts/` и демо-сырьё в `data/raw/`.
+В репозитории **намеренно нет** большого **`data/processed/flows.csv`** (он в `.gitignore`). Зато есть **код**, **конфиги**, **готовые веса** в **`artifacts/`** и демо-сырьё в **`data/raw/`**.
 
 **Минимальный рабочий сценарий для нового клона:**
 
-1. Создать venv и `pip install -r requirements.txt` (и при необходимости `requirements-ml.txt` для torch).
-2. Выполнить **`python main.py all --demo-mode`** — появится синтетика, выполнится `prepare`, затем `detect`; так вы убедитесь, что цепочка живая.
-3. Либо взять свой CSV → **`python main.py prepare --input путь\к\файлу.csv`**.
+1. §4.2–4.4: клон, **`.venv`**, **`pip install -r requirements.txt`** (и при необходимости §4.5 для torch).
+2. **`python main.py all --demo-mode`** — синтетика, `prepare`, `detect`.
+3. Либо свой CSV → **`python main.py prepare --input путь\к\файлу.csv`**.
 
-**Почему `validate` может ругаться:** если ещё не создан `flows.csv` по пути из `settings.yaml`, сообщение об этом ожидаемо — сначала шаг 2 или 3 выше.
+**Почему `validate` может ругаться:** пока нет `flows.csv` по пути из `settings.yaml` — сначала шаг 2 или 3.
 
-**Прокси после клона:** код прокси в репозитории есть; для работы достаточно зависимостей и свободного порта. Цепочка «прокси → NDJSON → буфер» описана в командах `proxy`, `proxy-ingest`, `proxy-sync-buffer` в §6.
+**Прокси после клона:** достаточно зависимостей и свободного порта; команды **`proxy`**, **`proxy-ingest`**, **`proxy-sync-buffer`** — в §6.
 
 ---
 
