@@ -18,6 +18,22 @@ def test_load_siem_events_ndjson_normalizes_aliases(tmp_path):
     assert df["event_type"].tolist() == ["failed_login", "config_change"]
 
 
+def test_load_siem_events_ndjson_skips_bad_lines_and_non_objects(tmp_path):
+    """Битый JSON / массив в строке не роняют весь файл — остаются только объекты."""
+    p = tmp_path / "mixed.ndjson"
+    p.write_text(
+        '{"ip": "1.1.1.1", "event_type": "ok"}\n'
+        "not json at all\n"
+        '{"ip": "2.2.2.2", "event_type": "also_ok"}\n'
+        '[1, 2, 3]\n'
+        '{"ip": "3.3.3.3", "event_type": "last"}\n',
+        encoding="utf-8",
+    )
+    df = load_siem_events_ndjson(p)
+    assert len(df) == 3
+    assert df["ip"].tolist() == ["1.1.1.1", "2.2.2.2", "3.3.3.3"]
+
+
 def test_detection_script_load_siem_ndjson_branch(monkeypatch):
     import runpy
 

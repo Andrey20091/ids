@@ -62,6 +62,9 @@ def load_siem_events_ndjson(path: str | Path) -> pd.DataFrame:
 
     Поддерживаемые поля: ``ip`` (или ``client_ip``), ``event_type`` (или ``evt``),
     опционально ``timestamp``, ``severity``.
+
+    Строки с невалидным JSON или не-объектами **пропускаются** (потоковые логи часто
+    содержат мусор/обрыв) — детекция не падает целиком из-за одной строки.
     """
     p = Path(path)
     rows: list[dict] = []
@@ -70,7 +73,12 @@ def load_siem_events_ndjson(path: str | Path) -> pd.DataFrame:
             line = line.strip()
             if not line:
                 continue
-            rows.append(json.loads(line))
+            try:
+                obj = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if isinstance(obj, dict):
+                rows.append(obj)
     if not rows:
         return pd.DataFrame()
     return _normalize_siem_columns(pd.DataFrame(rows))
