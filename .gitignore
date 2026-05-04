@@ -45,7 +45,8 @@ storage/qa_proxy_soak_flows.csv
 storage/qa_proxy_soak_state.json
 storage/qa_proxy_soak_alerts.json
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
 *.log
 build/
 build_tmp_cli/
