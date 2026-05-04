@@ -59,7 +59,7 @@ from src.utils.console_encoding import configure_stdio_utf8
 
 def _ensure_frozen_writable_root() -> None:
     """
-    В Program Files писать в _internal нельзя — данные и артефакты в %LOCALAPPDATA%\\IDS_ML_Project.
+    У frozen-приложения каталог с exe часто только для чтения — данные и артефакты в %LOCALAPPDATA%\\IDS_ML_Project.
     Скрипты и src/utils_config читают IDS_PROJECT_ROOT из окружения.
     """
     if not getattr(sys, "frozen", False):
@@ -176,7 +176,7 @@ def _torch_probe() -> tuple[bool, str | None]:
 
 
 def _sibling_dashboard_exe() -> Path | None:
-    """Путь к ids-dashboard.exe при установке: {app}/ids-cli/ids-cli.exe → {app}/ids-dashboard/."""
+    """Путь к ids-dashboard.exe рядом со сборкой: .../ids-cli/ids-cli.exe → .../ids-dashboard/ids-dashboard.exe."""
     if not getattr(sys, "frozen", False):
         return None
     exe = Path(sys.executable).resolve()
@@ -215,13 +215,13 @@ def _run_dashboard() -> int:
                     )
             except OSError as e:
                 print(f"Не удалось запустить IDS Dashboard: {e}")
-                print("Запустите дашборд вручную из меню «Пуск» или из папки ids-dashboard.")
+                print("Запустите дашборд вручную: ids-dashboard.exe из папки ids-dashboard или из исходников: python main.py dashboard")
                 return 0
             print("IDS Dashboard запущен отдельно; откройте URL в браузере (см. окно/лог дашборда).")
             return 0
         print(
             "IDS Dashboard не найден рядом с CLI (ожидался каталог ..\\ids-dashboard\\ids-dashboard.exe). "
-            "Установите полный пакет IDS ML Project или запустите дашборд отдельно."
+            "Соберите дашборд рядом с ids-cli (PyInstaller, ids-dashboard.spec) либо запустите из репозитория: python main.py dashboard"
         )
         return 0
 
