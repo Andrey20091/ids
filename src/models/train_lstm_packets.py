@@ -17,15 +17,20 @@ except ImportError:
     nn = None  # type: ignore[misc, assignment]
 
 
-class _PacketLSTM(nn.Module):
-    def __init__(self, feat_dim: int, hidden: int, num_classes: int):
-        super().__init__()
-        self.lstm = nn.LSTM(feat_dim, hidden, batch_first=True, num_layers=1)
-        self.fc = nn.Linear(hidden, num_classes)
+if nn is not None:
 
-    def forward(self, x: "torch.Tensor") -> "torch.Tensor":
-        h, _ = self.lstm(x)
-        return self.fc(h[:, -1, :])
+    class _PacketLSTM(nn.Module):
+        def __init__(self, feat_dim: int, hidden: int, num_classes: int):
+            super().__init__()
+            self.lstm = nn.LSTM(feat_dim, hidden, batch_first=True, num_layers=1)
+            self.fc = nn.Linear(hidden, num_classes)
+
+        def forward(self, x: "torch.Tensor") -> "torch.Tensor":
+            h, _ = self.lstm(x)
+            return self.fc(h[:, -1, :])
+
+else:
+    _PacketLSTM = None  # type: ignore[misc, assignment]
 
 
 def train_lstm_packets(

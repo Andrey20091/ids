@@ -34,10 +34,18 @@ def test_load_siem_events_ndjson_skips_bad_lines_and_non_objects(tmp_path):
     assert df["ip"].tolist() == ["1.1.1.1", "2.2.2.2", "3.3.3.3"]
 
 
-def test_detection_script_load_siem_ndjson_branch(monkeypatch):
+def test_detection_script_load_siem_ndjson_branch(monkeypatch, tmp_path):
     import runpy
 
-    module = runpy.run_path("scripts/03_run_detection_batch.py")
+    repo = Path(__file__).resolve().parents[1]
+    storage = tmp_path / "storage"
+    storage.mkdir(parents=True, exist_ok=True)
+    nd = storage / "siem_events_sample.ndjson"
+    nd.write_text('{"ip":"0.0.0.0","event_type":"ping"}\n', encoding="utf-8")
+
+    monkeypatch.setenv("IDS_PROJECT_ROOT", str(tmp_path))
+    script = repo / "scripts" / "03_run_detection_batch.py"
+    module = runpy.run_path(str(script))
     load_siem = module["_load_siem"]
     root = Path(module["_ROOT"])
 

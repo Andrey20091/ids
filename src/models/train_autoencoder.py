@@ -28,24 +28,29 @@ else:
     _TORCH_ERR = None
 
 
-class _AE(nn.Module):
-    def __init__(self, n_features: int, encoding_dim: int = 32):
-        super().__init__()
-        self.encoder = nn.Sequential(
-            nn.Linear(n_features, max(encoding_dim * 2, 16)),
-            nn.ReLU(),
-            nn.Linear(max(encoding_dim * 2, 16), encoding_dim),
-            nn.ReLU(),
-        )
-        self.decoder = nn.Sequential(
-            nn.Linear(encoding_dim, max(encoding_dim * 2, 16)),
-            nn.ReLU(),
-            nn.Linear(max(encoding_dim * 2, 16), n_features),
-        )
+if nn is not None:
 
-    def forward(self, x):
-        z = self.encoder(x)
-        return self.decoder(z)
+    class _AE(nn.Module):
+        def __init__(self, n_features: int, encoding_dim: int = 32):
+            super().__init__()
+            self.encoder = nn.Sequential(
+                nn.Linear(n_features, max(encoding_dim * 2, 16)),
+                nn.ReLU(),
+                nn.Linear(max(encoding_dim * 2, 16), encoding_dim),
+                nn.ReLU(),
+            )
+            self.decoder = nn.Sequential(
+                nn.Linear(encoding_dim, max(encoding_dim * 2, 16)),
+                nn.ReLU(),
+                nn.Linear(max(encoding_dim * 2, 16), n_features),
+            )
+
+        def forward(self, x):
+            z = self.encoder(x)
+            return self.decoder(z)
+
+else:
+    _AE = None  # type: ignore[misc, assignment]
 
 
 def train_autoencoder(

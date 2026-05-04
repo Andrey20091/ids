@@ -30,15 +30,20 @@ else:
     _TORCH_ERR = None
 
 
-class _LSTMClassifier(nn.Module):
-    def __init__(self, n_features: int, hidden_size: int, num_classes: int):
-        super().__init__()
-        self.lstm = nn.LSTM(n_features, hidden_size, batch_first=True)
-        self.fc = nn.Linear(hidden_size, num_classes)
+if nn is not None:
 
-    def forward(self, x):
-        out, _ = self.lstm(x)
-        return self.fc(out[:, -1, :])
+    class _LSTMClassifier(nn.Module):
+        def __init__(self, n_features: int, hidden_size: int, num_classes: int):
+            super().__init__()
+            self.lstm = nn.LSTM(n_features, hidden_size, batch_first=True)
+            self.fc = nn.Linear(hidden_size, num_classes)
+
+        def forward(self, x):
+            out, _ = self.lstm(x)
+            return self.fc(out[:, -1, :])
+
+else:
+    _LSTMClassifier = None  # type: ignore[misc, assignment]
 
 
 def _windows(X: np.ndarray, seq_len: int) -> np.ndarray:

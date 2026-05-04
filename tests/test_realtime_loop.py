@@ -4,7 +4,14 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import pytest
 import src.online.retrain_scheduler as retrain_scheduler
+
+
+@pytest.fixture(autouse=True)
+def _clear_ids_project_root_for_realtime_tests(monkeypatch):
+    """Соседние тесты могут выставлять IDS_PROJECT_ROOT; realtime грузит settings/features от корня."""
+    monkeypatch.delenv("IDS_PROJECT_ROOT", raising=False)
 
 
 def test_realtime_loop_processes_one_chunk(tmp_path, monkeypatch):
@@ -47,7 +54,8 @@ def test_realtime_loop_processes_one_chunk(tmp_path, monkeypatch):
 
 
 def test_realtime_loop_uses_merged_feature_config(tmp_path, monkeypatch):
-    script_path = Path(__file__).resolve().parents[1] / "scripts" / "05_run_realtime_detection.py"
+    repo = Path(__file__).resolve().parents[1]
+    script_path = repo / "scripts" / "05_run_realtime_detection.py"
     spec = importlib.util.spec_from_file_location("realtime_script", script_path)
     module = importlib.util.module_from_spec(spec)
     assert spec is not None and spec.loader is not None
@@ -81,6 +89,8 @@ def test_realtime_loop_uses_merged_feature_config(tmp_path, monkeypatch):
             str(out_path),
             "--iterations",
             "1",
+            "--features-yaml",
+            str(repo / "config" / "feature_columns.yaml"),
         ]
         module.main()
     finally:

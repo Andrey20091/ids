@@ -1,5 +1,4 @@
 import importlib.util
-import os
 import sys
 from pathlib import Path
 
@@ -69,8 +68,7 @@ def test_embedding_hyperparams_are_read_from_settings(tmp_path, monkeypatch):
         }
     ).to_csv(tmp_path / "data" / "processed" / "flows.csv", index=False)
 
-    old_root = os.environ.get("IDS_PROJECT_ROOT")
-    os.environ["IDS_PROJECT_ROOT"] = str(tmp_path)
+    monkeypatch.setenv("IDS_PROJECT_ROOT", str(tmp_path))
     mod, script_path = _load_train_script()
     captured = {}
 
@@ -90,10 +88,6 @@ def test_embedding_hyperparams_are_read_from_settings(tmp_path, monkeypatch):
         mod.main()
     finally:
         sys.argv = old_argv
-        if old_root is None:
-            os.environ.pop("IDS_PROJECT_ROOT", None)
-        else:
-            os.environ["IDS_PROJECT_ROOT"] = old_root
 
     assert captured["epochs"] == 7
     assert captured["hidden"] == 19

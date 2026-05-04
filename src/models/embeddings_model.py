@@ -18,32 +18,35 @@ except ImportError:
     nn = None
 
 
-class FlowEmbeddingNet(nn.Module):
-    """Small MLP with Embedding for port and protocol indices."""
+if nn is not None:
 
-    def __init__(
-        self,
-        num_ports: int,
-        num_protocols: int,
-        n_numeric: int,
-        embed_dim: int = 16,
-        hidden: int = 64,
-        n_classes: int = 2,
-    ):
-        if nn is None:
-            raise ImportError("Install torch for FlowEmbeddingNet")
-        super().__init__()
-        self.port_emb = nn.Embedding(num_ports + 1, embed_dim, padding_idx=0)
-        self.proto_emb = nn.Embedding(num_protocols + 1, embed_dim, padding_idx=0)
-        in_dim = embed_dim * 2 + n_numeric
-        self.net = nn.Sequential(
-            nn.Linear(in_dim, hidden),
-            nn.ReLU(),
-            nn.Linear(hidden, n_classes),
-        )
+    class FlowEmbeddingNet(nn.Module):
+        """Small MLP with Embedding for port and protocol indices."""
 
-    def forward(self, port_idx, proto_idx, numeric):
-        pe = self.port_emb(port_idx)
-        pr = self.proto_emb(proto_idx)
-        x = torch.cat([pe, pr, numeric], dim=-1)
-        return self.net(x)
+        def __init__(
+            self,
+            num_ports: int,
+            num_protocols: int,
+            n_numeric: int,
+            embed_dim: int = 16,
+            hidden: int = 64,
+            n_classes: int = 2,
+        ):
+            super().__init__()
+            self.port_emb = nn.Embedding(num_ports + 1, embed_dim, padding_idx=0)
+            self.proto_emb = nn.Embedding(num_protocols + 1, embed_dim, padding_idx=0)
+            in_dim = embed_dim * 2 + n_numeric
+            self.net = nn.Sequential(
+                nn.Linear(in_dim, hidden),
+                nn.ReLU(),
+                nn.Linear(hidden, n_classes),
+            )
+
+        def forward(self, port_idx, proto_idx, numeric):
+            pe = self.port_emb(port_idx)
+            pr = self.proto_emb(proto_idx)
+            x = torch.cat([pe, pr, numeric], dim=-1)
+            return self.net(x)
+
+else:
+    FlowEmbeddingNet = None  # type: ignore[misc, assignment]

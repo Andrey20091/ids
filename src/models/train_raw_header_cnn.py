@@ -18,24 +18,29 @@ except ImportError:
     nn = None
 
 
-class _HeaderByteCNN(nn.Module):
-    def __init__(self, seq_len: int, n_classes: int):
-        super().__init__()
-        self.seq_len = seq_len
-        self.net = nn.Sequential(
-            nn.Conv1d(1, 32, kernel_size=9, stride=4, padding=2),
-            nn.ReLU(inplace=True),
-            nn.Conv1d(32, 64, kernel_size=9, stride=4, padding=2),
-            nn.ReLU(inplace=True),
-            nn.AdaptiveAvgPool1d(1),
-        )
-        self.fc = nn.Linear(64, n_classes)
+if nn is not None:
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-        # x: (batch, seq_len) -> (batch, 1, seq_len)
-        x = x.unsqueeze(1)
-        h = self.net(x).squeeze(-1)
-        return self.fc(h)
+    class _HeaderByteCNN(nn.Module):
+        def __init__(self, seq_len: int, n_classes: int):
+            super().__init__()
+            self.seq_len = seq_len
+            self.net = nn.Sequential(
+                nn.Conv1d(1, 32, kernel_size=9, stride=4, padding=2),
+                nn.ReLU(inplace=True),
+                nn.Conv1d(32, 64, kernel_size=9, stride=4, padding=2),
+                nn.ReLU(inplace=True),
+                nn.AdaptiveAvgPool1d(1),
+            )
+            self.fc = nn.Linear(64, n_classes)
+
+        def forward(self, x: torch.Tensor) -> torch.Tensor:
+            # x: (batch, seq_len) -> (batch, 1, seq_len)
+            x = x.unsqueeze(1)
+            h = self.net(x).squeeze(-1)
+            return self.fc(h)
+
+else:
+    _HeaderByteCNN = None  # type: ignore[misc, assignment]
 
 
 def train_raw_header_cnn(
